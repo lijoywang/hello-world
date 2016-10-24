@@ -209,7 +209,7 @@ exports.md5 = function(content){
 };
 
 exports.each = function (target, handler) {
-    if( Object.prototype.toString.call(target) === "[object Array]") {
+    if( Object.prototype.toString.call(target) === '[object Array]') {
         for (var i= 0,l=target.length;i<l;i++) {
             handler(target[i],i);
         }

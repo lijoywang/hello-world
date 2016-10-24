@@ -1,14 +1,14 @@
 /**
  * Created by bjhl on 15/11/27.
  */
-var other = require("./builder/other");
-var font = require("./builder/font");
-var css = require("./builder/css");
-var js = require("./builder/js");
-var html = require("./builder/html");
-var image = require("./builder/image");
+var other = require('./builder/other');
+var font = require('./builder/font');
+var css = require('./builder/css');
+var js = require('./builder/js');
+var html = require('./builder/html');
+var image = require('./builder/image');
 
-exports.build = function(){
+exports.build = function () {
     /*
      * 执行步骤
      * other 输出，如.swf
@@ -35,7 +35,8 @@ exports.build = function(){
 
     font.build();
 
-    css.build(function(){
+    css.build()
+    .then(function(){
         js.build();
 
         html.build();

@@ -1,21 +1,19 @@
 /**
  * Created by bjhl on 16/1/14.
  */
-var util = require("../tool/util");
-var cssTask = require("../tasks/cssResolve");
+var util = require('../tool/util');
+var cssTask = require('../tasks/cssResolve');
+var reverseDependencyMap = require('../tool/feTree').reverseDependencyMap;
 
-var reverseDependencyMap = require("../tool/feTree").reverseDependencyMap;
-
-exports.build = function(callbackFunction){
-    var source = 0;
-
-    util.each(reverseDependencyMap,function(deps,rootPath){
-        if(util.isCss(rootPath)){
-            source++;
-            cssTask.cssResolve(deps,rootPath,callbackFunction);
-        }
+exports.build = function () {
+    return new Promise(function (resolve, reject) {
+        util.each(reverseDependencyMap, function (deps, rootPath) {
+            if (util.isCss(rootPath)) {
+                cssTask.cssResolve(deps, rootPath)
+                .all(function () {
+                    resolve();
+                });
+            }
+        });
     });
-    if(!source) {
-        callbackFunction && callbackFunction();
-    }
-}
+};
