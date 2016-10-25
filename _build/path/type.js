@@ -4,10 +4,10 @@
  * @author lijun
  * @date 16/10/20
  */
-var handle = require('./handle');
+var path = require('path');
 
 function is(pattern, pathname) {
-    var extname = handle(pathname).extname;
+    var extname = path.extname(pathname);
 
     return pattern.indexOf(extname) > -1;
 }

@@ -36,7 +36,7 @@ exports.build = function () {
     font.build();
 
     css.build()
-    .then(function(){
+    .then(function () {
         js.build();
 
         html.build();

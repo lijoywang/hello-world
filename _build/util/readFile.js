@@ -7,7 +7,13 @@
 var fs = require('fs');
 
 exports.sync = function (pathname) {
-    return fs.readFileSync(pathname, 'utf-8');
+    try {
+        return fs.readFileSync(pathname, 'utf-8');
+    }
+    catch (error) {
+        console.log(error);
+    }
+
 };
 
 exports.async = function (pathname, done) {

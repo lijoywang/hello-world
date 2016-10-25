@@ -4,15 +4,22 @@
  * @author lijun
  * @date 16/10/20
  */
-var config = require('config');
+var config = require('./config');
 
-exports.rules = function () {
-    return {
-        //'src': '',
-        //'/src': ''
-    }
-};
+var tree = require('./util/tree');
 
 exports.build = function () {
+    tree.parse(
+        {
+            files: config.files,
+            amdConfig: config.amdConfig,
+            rules: config.rules,
+            filter: function (pathname) {
 
+            }
+        }
+    )
+    //.then(function (des, redes) {
+    //
+    //});
 };

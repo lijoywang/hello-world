@@ -1,7 +1,7 @@
 /**
  * Created by phpstorm
- * @file info
- * @author md5
+ * @file md5
+ * @author lijun
  * @date 16/10/21
  */
 var crypto = require('crypto');

@@ -6,7 +6,7 @@
  */
 var path = require('path');
 
-exports.dirname = __dirname;
+exports.projectRoot = path.dirname(__dirname);
 
 exports.developSrc= 'src'; // 开发目录
 exports.developLib= 'lib'; // 第三方类库
@@ -17,29 +17,31 @@ exports.outputLib = 'lib';
 exports.rules = {
     htmlRules: [
         {
-            pattern: /\s+src=['"]([\w\d\/\.])['"]\s+/,
+            pattern: /\s+src=['"]([\w\d\/\.]+)['"]/ig
+        },
+        {
+            pattern: /\s+href=['"]([^'"]+)['"]/ig,
             match: function (pathname) {
                 return pathname;
             }
         }
     ],
-    cssRules: {
-
-    },
+    cssRules: [
+        {
+            pattern: /^\s*@import\s+['"]([^'"]+)['"]/ig
+        }
+    ],
     jsRules: {
 
     }
 };
 
 exports.prefixConfig = {
-    'src': 'src',
-    '/src': 'src',
-    'lib': 'lib',
-    '/lib': 'lib'
+    'src': 'src'
 };
 
 exports.amdConfig = {
-    baseUrl: path.join(exports.dirname, exports.developSrc),
+    baseUrl: path.join(exports.projectRoot, exports.developSrc),
     paths: {
         "cores": 'cores',
         "utils": 'utils',
@@ -48,5 +50,5 @@ exports.amdConfig = {
 }
 
 exports.files = [
-    path.join(diskRoot, 'src/test/index.html')
+    path.join(exports.projectRoot, 'src/test/index.html')
 ];
