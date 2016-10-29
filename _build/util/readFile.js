@@ -16,6 +16,7 @@ exports.sync = function (pathname) {
 
 };
 
+
 exports.async = function (pathname, done) {
     return new Promise(function (resolve, reject) {
         fs.readFile(
