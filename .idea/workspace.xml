@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bca3a4b0-54a0-4ebf-99f4-58db402f4831" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_build/tree/index.js" afterPath="$PROJECT_DIR$/_build/tree/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/index1.styl" afterPath="$PROJECT_DIR$/src/test/index1.styl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_build/tree/lib/noop.js" afterPath="$PROJECT_DIR$/_build/tree/lib/noop.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_build/tree/lib/parse.js" afterPath="$PROJECT_DIR$/_build/tree/lib/parse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/test.styl" afterPath="$PROJECT_DIR$/src/test/test.styl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_build/tree/lib/write.js" afterPath="$PROJECT_DIR$/_build/tree/lib/write.js" />
     </list>
     <ignored path="hello-world.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,10 +28,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_build/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64659685" vertical-offset="713" max-vertical-offset="1095">
+            <state vertical-scroll-proportion="-12.784314" vertical-offset="308" max-vertical-offset="1095">
               <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
               <folding />
             </state>
@@ -53,14 +48,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_build/tree/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.72" vertical-offset="387" max-vertical-offset="795">
-              <caret line="52" column="56" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
-              <folding>
-                <element signature="e#0#79#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.073529415" vertical-offset="0" max-vertical-offset="870">
+              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="outputFileConfig.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/outputFileConfig.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
+              <caret line="0" column="32" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,16 +93,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-6.6" vertical-offset="0" max-vertical-offset="735">
               <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.8367347" vertical-offset="0" max-vertical-offset="255">
-              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -196,9 +189,9 @@
         <option value="$PROJECT_DIR$/_build/index.js" />
         <option value="$PROJECT_DIR$/_build/tree/lib/noop.js" />
         <option value="$PROJECT_DIR$/_build/tree/lib/printDependency.js" />
-        <option value="$PROJECT_DIR$/_build/tree/index.js" />
         <option value="$PROJECT_DIR$/_build/tree/lib/write.js" />
         <option value="$PROJECT_DIR$/_build/tree/lib/printMd5list.js" />
+        <option value="$PROJECT_DIR$/_build/tree/index.js" />
       </list>
     </option>
   </component>
@@ -683,13 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/outputFileConfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="57" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/builder/css.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31105992" vertical-offset="0" max-vertical-offset="434">
@@ -924,20 +910,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_build/tree/index.js">
+    <entry file="file://$PROJECT_DIR$/_build/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.72" vertical-offset="387" max-vertical-offset="795">
-          <caret line="52" column="56" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#79#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-12.784314" vertical-offset="308" max-vertical-offset="1095">
+          <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_build/index.js">
+    <entry file="file://$PROJECT_DIR$/src/outputFileConfig.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64659685" vertical-offset="713" max-vertical-offset="1095">
-          <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
+          <caret line="0" column="32" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_build/tree/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.073529415" vertical-offset="0" max-vertical-offset="870">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
           <folding />
         </state>
       </provider>

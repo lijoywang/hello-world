@@ -4,7 +4,7 @@
  * @author lijun
  * @date 16/10/24
  */
-var noop = require('')
+
 /**
  * 同步遍历树
  *
