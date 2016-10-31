@@ -4,7 +4,7 @@
  * @author lijun
  * @date 16/10/24
  */
-
+var noop = require('')
 /**
  * 同步遍历树
  *
@@ -13,6 +13,9 @@
  * @property files {string} 当前文件名称
  * @property rules {object} 内容正则
  * @property filter {fun} 根据rules返回sourceId
+ *
+ * @return
+ * tree {promise}
  */
 exports.parse = require('./lib/parse');
 
@@ -26,3 +29,25 @@ exports.parse = require('./lib/parse');
  * @property md5list {object} 发布之前的md5列表， 根据此列表判断是否增量发布
  */
 exports.build = require('./lib/build');
+
+/**
+ * 输出依赖关系
+ *
+ * @params tree {object}
+ * @params format {fun} 格式化路径
+ *
+ * @return
+ * {
+ *  md5:{},
+ *  dependency:{}
+ * }
+ */
+exports.printDependence = require('./lib/printDependency');
+
+/**
+ * 输出依赖关系
+ *
+ * @params tree {object}
+ * @params path 输出路径
+ */
+exports.printMd5list = require('./lib/printDependency');

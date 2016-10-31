@@ -5,5 +5,5 @@
  * @date 16/10/26
  */
 module.exports = function (value) {
-    return null;
+    return new Function();
 };

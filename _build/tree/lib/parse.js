@@ -78,6 +78,9 @@ class Tree {
                 function (value, $1) {
                     var sources = $1 || match(value) || '';
                     if (sources) {
+                        // template add pattern
+                        node['pattern'] = value;
+
                         sourcesFormat(sources, item)
                     }
                 }

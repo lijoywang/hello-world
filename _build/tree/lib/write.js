@@ -6,9 +6,9 @@
  */
 var write = require("write");
 
-module.exports = function (outputpath, content) {
+module.exports = function (path, content) {
     write(
-        outputpath,
+        path,
         content,
         function (error) {
             if (error) {
