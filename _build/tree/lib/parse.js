@@ -102,23 +102,11 @@ class Tree {
 
     process (node) {
         var me = this;
-
         var type = fileType.type(node.filename);
+        var action = me[type];
 
-        if (type === 'html') {
-            me.html(node);
-        }
-        else if (type === 'css') {
-            me.css(node)
-        }
-        else if (type === 'js') {
-            me.js(node);
-        }
-        else if (type === 'image') {
-            me.image(node);
-        }
-        else {
-            me.other(node);
+        if (action) {
+            action(node);
         }
     }
 
