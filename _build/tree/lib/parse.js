@@ -17,7 +17,6 @@ class Tree {
      * @params options {object}
      * @property files {string} 当前文件名称
      * @property rules {object}
-     * @property amdConfig {object}
      * @property filter {fun} 回调sourceId ,返回filename,返回挂在对象上的属性
      */
     constructor (options) {
@@ -25,30 +24,22 @@ class Tree {
 
         me.dendencyMap = new Map();
 
-        me.filter = new Function();
-
         Object.assign(me, options);
 
         var files = options.files || [];
-
-        return new Promise(function (resolve) {
-            files.forEach(function (filename) {
-                me.createNode(
-                    {
-                        filename: filename
-                    }
-                )
-                .then(function (node) {
-                    me.process(node);
-                });
-            });
+        files.forEach(function (filename) {
+            me.process(
+                me.createNode({filename: filename})
+            );
         });
 
+        return me.dendencyMap;
     }
 
     html (node) {
         var me = this;
-        var rule = me.fileType.isHtml
+        var filename = node.filename;
+        var rule = fileType.isHtml(filename)
             ? me.rules.htmlRules
             : me.rules.cssRules;
 
@@ -61,22 +52,20 @@ class Tree {
                     Object.assign(
                         patternOptions,
                         {
-                            filename: node.filename,
+                            filename: filename,
                             sourceId: sourceId
                         }
                     )
                 );
 
-
                 if (result.filename) {
-                    me.createNode(result)
-                    .then(function (childNode) {
-                        if (!result.isFilter) {
-                            // 递归
-                            me.process(childNode);
-                        }
-                        node.addChild(childNode);
-                    });
+                    var childNode = me.createNode(result);
+
+                    node.addChild(childNode);
+                    // 递归
+                    if (!result.isFilter) {
+                        me.process(childNode);
+                    }
                 }
             });
         };
@@ -100,63 +89,58 @@ class Tree {
         this.html(node);
     }
 
+    image (node) {
+
+    }
+
+    js (node) {
+
+    }
+
     process (node) {
         var me = this;
 
-        me.fileType = fileType(node.filename);
+        var type = fileType.type(node.filename);
 
-        if (me.fileType.isHtml) {
+        if (type === 'html') {
             me.html(node);
         }
-        else if (me.fileType.isCss) {
+        else if (type === 'css') {
             me.css(node)
         }
-        else if (me.fileType.isJs) {
+        else if (type === 'js') {
             me.js(node);
+        }
+        else if (type === 'image') {
+            me.image(node);
         }
         else {
             me.other(node);
         }
     }
 
-    createNode (options, done) {
+    createNode (options) {
         var me = this;
         var filename = options.filename;
         var node = me.dendencyMap.get(filename);
 
-        return new Promise(function (resolve, reject) {
-            if (node) {
-                resolve(node);
-            }
-            else {
-                fs.readFile(
-                    filename,
-                    'utf-8',
-                    function (error, content) {
-                        if (error) {
-                            reject();
-                            console.log('read file is error');
-                        }
-                        else {
-                            options['content'] = content;
+        if (!node) {
+            node = new Node(
+                Object.assign(
+                    {content: fs.readFileSync(filename, 'utf-8')},
+                    options
+                )
+            );
 
-                            node = new Node(options);
-                            me.dendencyMap.set(filename, node);
+            me.dendencyMap.set(filename, node);
+        }
 
-                            resolve(node);
-                        }
-                    }
-                );
-            }
-        });
+        return node;
     }
 }
 
 module.exports = function (options) {
     return new Promise(function (resolve) {
         resolve(new Tree(options));
-    })
-    .then(function (node) {
-        console.log(node)
     });
 };

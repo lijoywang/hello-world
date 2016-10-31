@@ -6,42 +6,61 @@
  */
 var path = require('path');
 
+exports.isHtml = function (filename) {
+    return [
+        '.html',
+        '.tpl'
+    ]
+    .indexOf(path.extname(filename)) > -1;
+};
 
-module.exports = function (filename) {
+exports.isCss = function (filename) {
+    return [
+        '.styl',
+        '.css',
+        '.scss'
+    ]
+    .indexOf(path.extname(filename)) > -1;
+};
 
-    var extname = path.extname(filename);
-    var result = { };
+exports.isJs = function (filename) {
+    return [
+        '.js'
+    ]
+    .indexOf(path.extname(filename) || '.js') > -1;
+};
 
-    var types = [
-        {
-            type: 'isJs',
-            rule: [
-                '.js'
-            ]
-        },
-        {
-            type: 'isCss',
-            rule: [
-                '.css',
-                '.styl',
-                '.scss'
-            ]
-        },
-        {
-            type: 'isHtml',
-            rule: [
-                '.tpl',
-                '.html'
-            ]
-        }
-    ];
+exports.isImage = function (filename) {
+    return [
+        '.png',
+        '.jpeg'
+    ]
+    .indexOf(path.extname(filename)) > -1;
+};
 
-    types.forEach(function (typeItem) {
-        if (typeItem.rule.indexOf(extname) > -1) {
-            result[typeItem.type] = true;
-            return false;
-        }
-    });
+exports.isOther = function (filename) {
+    return !exports.isJs(filename)
+        && !exports.isCss(filename)
+        && !exports.isHtml(filename)
+        && !exports.isImage(filename);
+};
 
-    return result;
+exports.type = function (filename) {
+    var extname = '';
+    if (exports.isJs(filename)) {
+        extname = 'js';
+    }
+    else if (exports.isHtml) {
+        extname = 'html'
+    }
+    else if (exports.isCss(filename)) {
+        extname = 'css';
+    }
+    else if (exports.isImage(filename)) {
+        extname = 'image';
+    }
+    else {
+        extname = 'other';
+    }
+    return extname;
 };

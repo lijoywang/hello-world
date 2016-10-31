@@ -7,8 +7,17 @@
 var config = require('./config');
 
 var tree = require('./tree/index');
+var fileType = require('./tree/lib/fileType');
 var sourceIdProperty = require('./util/sourceIdProperty');
 var getDisk = require('./util/getDisk');
+
+exports.builder = {
+    'js': require('./task/js'),
+    'css': require('./task/css'),
+    'html': require('./task/html'),
+    'image': require('./task/image'),
+    'other': require('./task/other')
+};
 
 exports.build = function () {
     tree.parse(
@@ -26,7 +35,7 @@ exports.build = function () {
                         isAmd: options.isAmd
                     }
                 );
-
+                // node节点添加属性
                 return Object.assign(
                     property,
                     {
@@ -36,16 +45,23 @@ exports.build = function () {
             }
         }
     )
-    //.then(function (treeNode) {
-    //    tree.build(
-    //        {
-    //            tree: treeNode,
-    //            builder: function (node) {
-    //                return new Promise(function (resolve) {
-    //                   resolve();
-    //                });
-    //            }
-    //        }
-    //    );
-    //});
+    .then(function (treeNode) {
+        tree.build(
+            {
+                tree: treeNode,
+                builder: function (node) {
+                    var extname = fileType.extname(node.filename);
+                    // TODO
+                    var builder = exports.builder[extname];
+
+                    if (builder) {
+                        return builder(node);
+                    }
+                    else {
+                        console.log('error:' + node);
+                    }
+                }
+            }
+        );
+    });
 };

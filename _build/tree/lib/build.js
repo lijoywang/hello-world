@@ -1,155 +1,71 @@
 /**
  * Created by phpstorm
- * @file build tree
+ * @file build node
  * @author lijun
  * @date 16/10/26
  */
-var md5 = require('../../util/md5');
-
-class Build {
-    /**
-     * 叶子结点开始构建
-     *
-     * @params {object}
-     * @property node {object}
-     * @property builder {fun}
-     * @property md5 {object} md5与node的md5比较，判断是否有改变，如果md5不存在，则重新编译
-     */
-    constructor (optoins) {
-        var me = this;
-        var building;
-        var builded;
-
-        // 编译状态
-        me.builded = false;
-        me.building = false;
-
-        me.builder = function (instance) {
-            return new Promise(function (resovel) {
-                resovel();
-            });
-        };
-        
-        Object.defineProperty(
-            me,
-            'building',
-            {
-                set: function (boolean) {
-                    var md5 = options.md5;
-                    if (md5 
-                        && 
-                        me.md5 == md5
-                    ) {
-                        me.builed = true;
-                        return false;
-                    }
-                    // 避免重复打包
-                    if (boolean === building) {
-                        return false;
-                    }
-
-                    building = boolean;
-
-                    if (building === true) {
-                        setTimeout (function () {
-                            me.builded = true;
-                        }, 1000 * Math.random())
-                    }
-                },
-                get: function () {
-                    return building;
-                }
-            }
-        );
-
-        Object.defineProperty(
-            me,
-            'builded',
-            {
-                set: function (boolean) {
-                    builded = boolean;
-
-                    if (builded === true) {
-                        if (me.parentMap.size) {
-                            me.parentMap.forEach(function (parentNode) {
-                                parentNode.notice();
-                            });
-
-                            me.parentMap.clear();
-                        }
-                    }
-                },
-                get: function () {
-                    return builded;
-                }
-            }
-        );
-
-        Object.assign(
-            me, 
-            options.node,
-            {
-                builder: options.builder
-            }
-        );
-    }
-    /**
-     * 递归叶子结点，build， 成功之后通知上级结点
-     */
-    recurNode () {
-        var me = this;
-
-        if (this.childMap.size) {
-            me.childMap.forEach(function (childNode) {
-                childNode.recurNode.call(childNode, me);
-            });
-        }
-        else {
-            me.building = true;
-        }
-    }
-
-    notice () {
-        var me = this;
-
-        var isChildBuild = true;
-
-        if (me.childMap.size) {
-            me.childMap.forEach(function (node) {
-                if (!node.builded) {
-                    isChildBuild = false;
-                    return false;
-                }
-            });
-        }
-
-        if (isChildBuild) {
-            me.isBuilding = true;
-        }
-    }
-};
-
-/**
- * 叶子结点开始构建
- *
- * @params {object}
- * @property tree {object}
- * @property builder {fun}
- * @property md5List {object} 发布之前的md5列表， 根据此列表判断是否增量发布
- */
 module.exports = function (options) {
     var tree = options.tree;
+    var md5list = options.md5list || {};
+    var builder = options.builder;
 
-    tree.forEach(function (node) {
-        var nodeBuild = new Build(
-            node,
-            options.builder,
-            {
-                md5: 244324
+    var noticeParents = function (parentNodes) {
+        if (parentNodes.size) {
+            parentNodes.forEach(function (parentNode) {
+                var childMap = parentNode.childMap;
+                // 所有子节点是否已build完成
+                var allBuiled = true;
+                childMap.forEach(function (node) {
+                    if (!node.builed) {
+                        allBuiled = false;
+                        return false;
+                    }
+                });
+
+                if (allBuiled) {
+                    build(parentNode);
+                }
+            });
+        }
+
+    };
+
+    var build = function (node) {
+        var filename = node.filename;
+        var nodeMd5 = node.md5;
+        var oldMd5 = md5list[filename];
+        var parentMap = node.parentMap;
+
+        if (node.builed === true) {
+            noticeParents(parentMap);
+            return false;
+        }
+
+        if (oldMd5
+            &&
+            oldMd5 == nodeMd5
+        ) {
+            node.builed = true;
+            noticeParents(parentMap);
+        }
+        else {
+            builder(node)
+            .then(function () {
+                node.builed = true;
+
+                console.log(node.filename)
+                noticeParents(parentMap);
+            });
+        }
+    };
+
+    if (tree.size) {
+        tree.forEach(function (node) {
+            // 叶子节点
+            if (!node.childMap.size) {
+                build(node);
             }
-        );
-
-        nodeBuild.recurNode();
-    });
+        });
+    }
 };
 
