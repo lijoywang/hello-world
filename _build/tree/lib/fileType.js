@@ -50,7 +50,7 @@ exports.type = function (filename) {
     if (exports.isJs(filename)) {
         extname = 'js';
     }
-    else if (exports.isHtml) {
+    else if (exports.isHtml(filename)) {
         extname = 'html'
     }
     else if (exports.isCss(filename)) {

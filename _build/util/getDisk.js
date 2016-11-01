@@ -58,3 +58,23 @@ module.exports = function (options) {
     }
     return diskPath;
 };
+/**
+ * 硬盘发布路径
+ *
+ * @params disk {string}
+ */
+exports.getOutput = function (disk) {
+    var output = '';
+
+    if (disk.indexOf(diskSrc) > -1) {
+        output = disk.replace(diskSrc, outputSrc);
+    }
+    else if (disk.indexOf(diskLib) > -1) {
+        output = disk.replace(diskLib, outputLib);
+    }
+    else {
+        console.log('diskPath format error');
+    }
+
+    return output;
+};

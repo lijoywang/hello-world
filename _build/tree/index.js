@@ -50,4 +50,4 @@ exports.printDependence = require('./lib/printDependency');
  * @params tree {object}
  * @params path 输出路径
  */
-exports.printMd5list = require('./lib/printDependency');
+exports.printMd5list = require('./lib/printMd5list');

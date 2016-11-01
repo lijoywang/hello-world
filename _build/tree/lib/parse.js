@@ -10,6 +10,8 @@ var fileType = require('./fileType');
 var Node = require('./Node');
 var noop = require('./noop');
 
+var cssTask = require('../../task/css');
+
 class Tree {
     /**
      * 生成入口文件树
@@ -39,36 +41,10 @@ class Tree {
     html (node) {
         var me = this;
         var filename = node.filename;
+
         var rule = fileType.isHtml(filename)
             ? me.rules.htmlRules
             : me.rules.cssRules;
-
-        var sourcesFormat =  function (sources, patternOptions) {
-            if (typeof sources === 'string') {
-                sources = [sources];
-            }
-            sources.forEach(function (sourceId) {
-                var result = me.filter(
-                    Object.assign(
-                        patternOptions,
-                        {
-                            filename: filename,
-                            sourceId: sourceId
-                        }
-                    )
-                );
-
-                if (result.filename) {
-                    var childNode = me.createNode(result);
-
-                    node.addChild(childNode);
-                    // 递归
-                    if (!result.isFilter) {
-                        me.process(childNode);
-                    }
-                }
-            });
-        };
 
         rule.forEach(function (item) {
             var match = item.match || noop;
@@ -78,10 +54,33 @@ class Tree {
                 function (value, $1) {
                     var sources = $1 || match(value) || '';
                     if (sources) {
-                        // template add pattern
-                        node['pattern'] = value;
+                        //sourcesFormat(sources, item)
 
-                        sourcesFormat(sources, item)
+                        if (typeof sources === 'string') {
+                            sources = [sources];
+                        }
+                        sources.forEach(function (sourceId) {
+
+                            var result = me.filter(
+                                Object.assign(
+                                    item,
+                                    {
+                                        filename: filename,
+                                        sourceId: sourceId
+                                    }
+                                )
+                            );
+
+                            if (result.filename) {
+                                var childNode = me.createNode(result);
+
+                                node.addChild(childNode);
+                                // 递归
+                                if (!result.isFilter) {
+                                    me.process(childNode);
+                                }
+                            }
+                        });
                     }
                 }
             );
@@ -102,11 +101,10 @@ class Tree {
 
     process (node) {
         var me = this;
-        var type = fileType.type(node.filename);
-        var action = me[type];
+        var action = me[fileType.type(node.filename)];
 
         if (action) {
-            action(node);
+            action.call(me, node);
         }
     }
 

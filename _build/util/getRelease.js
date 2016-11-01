@@ -5,7 +5,8 @@
  * @date 16/10/20
  */
 var path = require('path');
-var config = require('../../config');
+var config = require('../config');
+var getPathMd5 = require('../tree/lib/getPathMd5');
 
 var projectRoot = config.projectRoot;
 
@@ -17,19 +18,22 @@ var outputLib = path.join(projectOutput, config.outputLib);
  *
  * @params output {string}
  */
-module.exports = function (output) {
+module.exports = function (output, md5) {
     var sep = path.sep;
     var release = '';
-
     if (output.indexOf(outputSrc) > -1) {
-        release = output.replace(outputSrc, sep + config.outputSrc);
+        release = output.replace(outputSrc, config.outputSrc);
     }
     else if (output.indexOf(outputLib) > -1) {
-        release = output.replace(outputLib, sep + config.outputLib);
+        release = output.replace(outputLib, config.outputLib);
     }
     else {
         console.log('release format error');
     }
 
-    return release;
+    if (md5) {
+        release = getPathMd5(release, md5);
+    }
+
+    return sep + release;
 };

@@ -5,7 +5,7 @@
  * @date 16/10/20
  */
 var path = require('path');
-var config = require('../../config');
+var config = require('../config');
 
 var projectRoot = config.projectRoot;
 
@@ -19,6 +19,7 @@ var outputLib = path.join(projectOutput, config.outputLib);
  * 硬盘发布路径
  *
  * @params disk {string}
+ * @params md5 {string}
  */
 module.exports = function (disk) {
     var output = '';

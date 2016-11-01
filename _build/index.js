@@ -35,11 +35,13 @@ exports.build = function () {
                         isAmd: options.isAmd
                     }
                 );
-                // node节点添加属性
+
+                // 完善node节点，为打包做准备
                 return Object.assign(
                     property,
                     {
-                        filename: disk
+                        filename: disk,
+                        pattern: options.pattern
                     }
                 );
             }
@@ -50,12 +52,15 @@ exports.build = function () {
             {
                 tree: treeNode,
                 builder: function (node) {
-                    var extname = fileType.extname(node.filename);
-                    // TODO
-                    var builder = exports.builder[extname];
+                    var builder = exports.builder[fileType.type(node.filename)];
 
                     if (builder) {
-                        return builder(node);
+                        var promise =
+                            builder.build(node)
+                            .catch(function (error) {
+                                console.log(Promise.reject(error))
+                            });
+                        return promise;
                     }
                     else {
                         console.log('error:' + node);
@@ -63,5 +68,8 @@ exports.build = function () {
                 }
             }
         );
+    })
+    .catch( function (error) {
+        console.log(Promise.reject(error));
     });
 };

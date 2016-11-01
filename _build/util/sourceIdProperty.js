@@ -24,13 +24,8 @@ module.exports = function (source, options) {
     var filterReg = /^(http:\/\/|https:\/\/|data:)/ig;
     var result = {
         pathname: '',
-        prefix: '',
-        params: '',
-        extname: '',
         isPlugin: false,
-        isFilter: false,
-        isAmd: false,
-        source: source
+        isFilter: false
     };
 
     var extend = { };
@@ -50,26 +45,12 @@ module.exports = function (source, options) {
     else {
         var splits = source.split('?');
         var source = splits[0];
-        var params = splits[1] || '';
-
-        if (params) {
-            params = '?' + params;
-        }
 
         extend = {
-            prefix: source.replace(pathReg, ''),
-            pathname: source.match(pathReg)[0],
-            params: params,
-            extname: path.extname(source)
+            pathname: source.match(pathReg)[0]
         }
     }
 
-    if (result.extname === ''
-        || result.extname === '.js'
-    ) {
-        extend['extname'] = '.js';
-        extend['isAmd'] = true;
-    }
 
     return Object.assign(
         result,

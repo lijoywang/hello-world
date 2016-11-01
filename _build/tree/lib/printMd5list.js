@@ -15,7 +15,7 @@ module.exports = function (tree, path) {
     var md5list = { };
 
     tree.forEach(function (node) {
-        md5list[node.filename] = node.md5;
+        md5list[node.filename] = node;
     });
 
     write(path, JSON.stringify(md5list));
