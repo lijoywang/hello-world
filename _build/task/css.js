@@ -4,30 +4,30 @@
  * @author lijun
  * @date 16/10/20
  */
-var stylus = require('stylus');
-var epr = require('edp-provider-rider');
-var cleanCss = require('clean-css');
+const stylus = require('stylus');
+const epr = require('edp-provider-rider');
+const cleanCss = require('clean-css');
 
-var CleanCSS = new cleanCss();
+const CleanCSS = new cleanCss();
 // 默认配置
-var stylusPlugin = epr.plugin({
+const stylusPlugin = epr.plugin({
     use: function (style) {
         style.define('url', epr.stylus.resolver());
     }
 });
 
-var fileType = require('../tree/lib/fileType');
-var config = require('../config');
-var getOutput = require('../util/getOutput');
-var plugin = require('../util/plugin');
+const fileType = require('../tree/lib/fileType');
+const config = require('../config');
+const getOutput = require('../util/getOutput');
+const plugin = require('../util/plugin');
 
-exports.combine = function (filename, content) {
-    return new Promise(function (resolve) {
+exports.combine = (filename, content) => {
+    return new Promise(resolve => {
         stylus(content)
         .set('filename', filename)
         .set('paths', [config.developSrc])
         .use(stylusPlugin)
-        .render(function (error, content) {
+        .render((error, content) => {
             if (error) {
                 console.error(error);
             }
@@ -40,12 +40,12 @@ exports.combine = function (filename, content) {
 /**
  * 父节点中如果有html入口文件，则为入口文件
  */
-exports.isEntry = function (node) {
-    var boolean = false;
-    var parentMap = node.parentMap;
+exports.isEntry = (node) => {
+    let boolean = false;
+    let parentMap = node.parentMap;
 
     if (parentMap.size) {
-        parentMap.forEach(function (parentNode) {
+        parentMap.forEach(parentNode => {
             if (fileType.isHtml(parentNode.filename)) {
                 boolean = true;
                 return false;
@@ -66,29 +66,24 @@ exports.isEntry = function (node) {
  * @return
  * 添加节点output与content属性
  */
-exports.build = function (node) {
-    return new Promise(function (resolve) {
-        var filename = node.filename;
-        var content = node.content;
-
-        var output = getOutput(filename);
+exports.build = (node) => {
+    return new Promise((resolve, reject) => {
+        let filename = node.filename;
+        let content = node.content;
 
         if (node.isPlugin || exports.isEntry(node)) {
-            exports.combine(filename, content)
-            .then(function (content) {
+            exports.combine(node.filename, content)
+            .then(content => {
                 if (node.isPlugin) {
                     content = plugin.getContent(content);
-                    output = plugin.getPath(output);
                 }
 
                 node.content = content;
-                node.output = output;
-
-                resolve();
+                resolve(true);
             });
         }
         else {
-            resolve();
+            resolve(false);
         }
     });
 };

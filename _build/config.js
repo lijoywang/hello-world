@@ -9,11 +9,12 @@ var path = require('path');
 exports.projectRoot = path.dirname(__dirname);
 
 exports.developSrc= 'src'; // 开发目录
-exports.developLib= 'lib'; // 第三方类库
-exports.output = 'output'; // 输入根路径
-exports.outputSrc = 'assert';
-exports.outputLib = 'lib';
+exports.developLib= 'lib'; // 开发依赖库
+exports.output = 'output'; // 输出根路径
+exports.outputSrc = 'assert'; // 输出替换src值
+exports.outputLib = 'lib'; // 输入替换lib值
 
+// 查找文件内容规则
 exports.rules = {
     htmlRules: [
         {
@@ -30,16 +31,15 @@ exports.rules = {
         {
             pattern: /^\s*@import\s+['"]([^'"]+)['"]/ig
         }
-    ],
-    jsRules: {
-
-    }
+    ]
 };
 
+// 路径容错
 exports.prefixConfig = {
     'src': 'src'
 };
 
+// amd config
 exports.amdConfig = {
     baseUrl: path.join(exports.projectRoot, exports.developSrc),
     paths: {
@@ -47,8 +47,11 @@ exports.amdConfig = {
         "utils": 'utils',
         "services": 'services'
     }
-}
+};
 
+// 入口文件
 exports.files = [
-    path.join(exports.projectRoot, 'src/test/index.html')
+    path.join(exports.projectRoot, 'src/test/index.html'),
+    path.join(exports.projectRoot, 'src/test/index1.html')
 ];
+

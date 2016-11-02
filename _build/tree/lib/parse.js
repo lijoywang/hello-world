@@ -4,13 +4,11 @@
  * @author lijun
  * @date 16/10/24
  */
-
-var fs = require('fs');
-var fileType = require('./fileType');
-var Node = require('./Node');
-var noop = require('./noop');
-
-var cssTask = require('../../task/css');
+const fs = require('fs');
+const fileType = require('./fileType');
+const Node = require('./Node');
+const noop = require('./noop');
+var readSync = require('./readSync');
 
 class Tree {
     /**
@@ -22,57 +20,48 @@ class Tree {
      * @property filter {fun} 回调sourceId ,返回filename,返回挂在对象上的属性
      */
     constructor (options) {
-        var me = this;
+        let me = this;
 
         me.dendencyMap = new Map();
 
         Object.assign(me, options);
 
-        var files = options.files || [];
-        files.forEach(function (filename) {
+        let files = options.files || [];
+        files.forEach(
+            filename =>
             me.process(
-                me.createNode({filename: filename})
-            );
-        });
+                me.createNode(me.filter({filename: filename}))
+            )
+        );
 
         return me.dendencyMap;
     }
 
     html (node) {
-        var me = this;
-        var filename = node.filename;
+        let me = this;
+        let filename = node.filename;
 
-        var rule = fileType.isHtml(filename)
+        let rule = fileType.isHtml(filename)
             ? me.rules.htmlRules
             : me.rules.cssRules;
 
-        rule.forEach(function (item) {
-            var match = item.match || noop;
+        rule.forEach((item) => {
+            let match = item.match || noop;
 
             node.content.replace(
                 item.pattern,
-                function (value, $1) {
-                    var sources = $1 || match(value) || '';
+                (value, $1) => {
+                    let sources = $1 || match(value) || '';
                     if (sources) {
-                        //sourcesFormat(sources, item)
-
                         if (typeof sources === 'string') {
                             sources = [sources];
                         }
-                        sources.forEach(function (sourceId) {
 
-                            var result = me.filter(
-                                Object.assign(
-                                    item,
-                                    {
-                                        filename: filename,
-                                        sourceId: sourceId
-                                    }
-                                )
-                            );
+                        sources.forEach(sourceId => {
+                            let result = me.filter(Object.assign(item, {filename, sourceId}));
 
                             if (result.filename) {
-                                var childNode = me.createNode(result);
+                                let childNode = me.createNode(result);
 
                                 node.addChild(childNode);
                                 // 递归
@@ -100,8 +89,8 @@ class Tree {
     }
 
     process (node) {
-        var me = this;
-        var action = me[fileType.type(node.filename)];
+        let me = this;
+        let action = me[fileType.type(node.filename)];
 
         if (action) {
             action.call(me, node);
@@ -109,14 +98,14 @@ class Tree {
     }
 
     createNode (options) {
-        var me = this;
-        var filename = options.filename;
-        var node = me.dendencyMap.get(filename);
+        let me = this;
+        let filename = options.filename;
+        let node = me.dendencyMap.get(filename);
 
         if (!node) {
             node = new Node(
                 Object.assign(
-                    {content: fs.readFileSync(filename, 'utf-8')},
+                    {content: readSync(filename)},
                     options
                 )
             );
@@ -128,8 +117,6 @@ class Tree {
     }
 }
 
-module.exports = function (options) {
-    return new Promise(function (resolve) {
-        resolve(new Tree(options));
-    });
+module.exports = (options) => {
+    return new Promise(resolve => resolve(new Tree(options)));
 };

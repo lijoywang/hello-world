@@ -4,11 +4,11 @@
  * @author lijun
  * @date 16/10/20
  */
-exports.getPath = function (path) {
+exports.getPath = (path) => {
     return path.join(path.dirname(path), 'plugin', path.basename(path));
 };
 
-exports.getContent = function (pluginPath, content) {
+exports.getContent = (pluginPath, content) => {
     return "define("
         + JSON.stringify(pluginPath)
         + ",function(require){return "

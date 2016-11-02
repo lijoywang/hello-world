@@ -4,10 +4,10 @@
  * @author lijun
  * @date 16/10/20
  */
-var path = require('path');
-var config = require('../config');
-var amdConfig = config.amdConfig;
-var prefixConfig = config.prefixConfig;
+const path = require('path');
+const config = require('../config');
+const amdConfig = config.amdConfig;
+const prefixConfig = config.prefixConfig;
 /**
  * 硬盘开发路径
  *
@@ -16,28 +16,28 @@ var prefixConfig = config.prefixConfig;
  * @property pathname {string}
  * @property isAmd {boolean}
  */
-module.exports = function (options) {
-    var filename = options.filename;
-    var pathname = options.pathname;
+module.exports = (options) => {
+    let filename = options.filename;
+    let pathname = options.pathname;
 
-    var diskPath = '';
+    let diskPath = '';
     // 模块
     if (options.isAmd) {
-        var baseUrl = amdConfig.baseUrl;
-        var paths = amdConfig.paths;
+        let baseUrl = amdConfig.baseUrl;
+        let paths = amdConfig.paths;
 
-        var amdPath = paths[pathname];
+        let amdPath = paths[pathname];
         if (amdPath) {
             diskPath = path.join(baseUrl, amdPath);
         }
     }
     // template
     else {
-        var prefixKey = '';
-        for (var key in prefixConfig) {
-            // TODO
-            if (pathname.indexOf(key) === 0) {
+        let prefixKey = '';
+        for (let key in prefixConfig) {
+            if (pathname.startsWith(key)) {
                 prefixKey = key;
+                return false;
             }
         }
 
@@ -57,24 +57,4 @@ module.exports = function (options) {
         );
     }
     return diskPath;
-};
-/**
- * 硬盘发布路径
- *
- * @params disk {string}
- */
-exports.getOutput = function (disk) {
-    var output = '';
-
-    if (disk.indexOf(diskSrc) > -1) {
-        output = disk.replace(diskSrc, outputSrc);
-    }
-    else if (disk.indexOf(diskLib) > -1) {
-        output = disk.replace(diskLib, outputLib);
-    }
-    else {
-        console.log('diskPath format error');
-    }
-
-    return output;
 };

@@ -5,6 +5,6 @@
  * @date 16/10/20
  */
 
-exports.build = function () {
+exports.build = () {
 
 };

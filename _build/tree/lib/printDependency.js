@@ -4,7 +4,7 @@
  * @author lijun
  * @date 16/10/29
  */
-var noop = require('./noop');
+const noop = require('./noop');
 /**
  * 输出依赖关系
  *
@@ -17,24 +17,21 @@ var noop = require('./noop');
  *  dependency:{}
  * }
  */
-module.exports = function (tree, format) {
-    format = format || noop;
-
-    var dependencyMap = {
+module.exports = (tree, format = noop) => {
+    let dependencyMap = {
         md5list: { },
         dependency: { }
     };
 
-
-    tree.forEach(function (node) {
-        var filename = format(node.filename);
-        var md5list = dependencyMap.md5list;
-        var dependency = dependencyMap.dependency;
-        var childMap = node.childMap;
+    tree.forEach(node => {
+        let filename = format(node.filename);
+        let md5list = dependencyMap.md5list;
+        let dependency = dependencyMap.dependency;
+        let childMap = node.childMap;
         
-        var rootDependency = dependency[filename] = [];
+        let rootDependency = dependency[filename] = [];
         if (childMap.size) {
-            childMap.forEach(function (childNode) {
+            childMap.forEach(childNode => {
                 rootDependency.push(childNode.filename);
             });
         }

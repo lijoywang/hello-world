@@ -4,12 +4,16 @@
  * @author lijun
  * @date 16/10/20
  */
-var config = require('./config');
+const path = require('path');
+const config = require('./config');
 
-var tree = require('./tree/index');
-var fileType = require('./tree/lib/fileType');
-var sourceIdProperty = require('./util/sourceIdProperty');
-var getDisk = require('./util/getDisk');
+const {parse, buildTree, write} = require('./tree/index');
+const fileType = require('./tree/lib/fileType');
+const sourceIdProperty = require('./util/sourceIdProperty');
+const getDisk = require('./util/getDisk');
+const getOutput = require('./util/getOutput');
+const plugin = require('./util/plugin');
+const getPathMd5 = require('./util/getPathMd5');
 
 exports.builder = {
     'js': require('./task/js'),
@@ -19,57 +23,82 @@ exports.builder = {
     'other': require('./task/other')
 };
 
-exports.build = function () {
-    tree.parse(
+exports.build = () => {
+    parse(
         {
             files: config.files,
             rules: config.rules,
-            filter: function (options) {
-                var sourceId = options.sourceId;
-                var property = sourceIdProperty(sourceId);
-
-                var disk = getDisk(
-                    {
-                        filename: options.filename,
-                        pathname: property.pathname,
-                        isAmd: options.isAmd
+            filter: (options) => {
+                let {filename, sourceId} = options;
+                if (!sourceId) {
+                    return {
+                        filename,
+                        output: getOutput(filename)
                     }
-                );
+                }
+                else {
+                    var property = sourceIdProperty(sourceId);
 
-                // 完善node节点，为打包做准备
-                return Object.assign(
-                    property,
-                    {
-                        filename: disk,
-                        pattern: options.pattern
+                    filename = getDisk(
+                        {
+                            filename,
+                            pathname: property.pathname,
+                            isAmd: options.isAmd
+                        }
+                    );
+
+                    let output = getOutput(filename);
+                    if (property.isPlugin) {
+                        output = plugin.getPath(output);
                     }
-                );
+
+                    // 完善node节点，为打包做准备
+                    return Object.assign(
+                        property,
+                        {
+                            filename,
+                            output,
+                            pattern: options.pattern
+                        }
+                    );
+                }
             }
         }
     )
-    .then(function (treeNode) {
-        tree.build(
+    .then((treeNode) => {
+        buildTree(
             {
                 tree: treeNode,
-                builder: function (node) {
+                builder: (node) => {
                     var builder = exports.builder[fileType.type(node.filename)];
 
                     if (builder) {
                         var promise =
                             builder.build(node)
-                            .catch(function (error) {
-                                console.log(Promise.reject(error))
+                            .then((builed) => {
+                                if (builed) {
+                                    // 输出文件
+                                    write(getPathMd5(node.output, node.amd5), node.content);
+                                }
+                            })
+                            .catch((error) => {
+                                console.log(error)
                             });
                         return promise;
                     }
                     else {
                         console.log('error:' + node);
                     }
+                },
+                // 增量md5 list
+                md5path: path.join(config.projectRoot, config.developSrc, 'md5Cache.json'),
+                complete: function () {
+                    // TODO
                 }
             }
         );
     })
-    .catch( function (error) {
-        console.log(Promise.reject(error));
+    .catch((error) => {
+        console.log(error);
     });
 };

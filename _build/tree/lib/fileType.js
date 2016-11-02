@@ -4,9 +4,9 @@
  * @author lijun
  * @date 16/10/29
  */
-var path = require('path');
+const path = require('path');
 
-exports.isHtml = function (filename) {
+exports.isHtml = (filename) => {
     return [
         '.html',
         '.tpl'
@@ -14,7 +14,7 @@ exports.isHtml = function (filename) {
     .indexOf(path.extname(filename)) > -1;
 };
 
-exports.isCss = function (filename) {
+exports.isCss = (filename) => {
     return [
         '.styl',
         '.css',
@@ -23,14 +23,14 @@ exports.isCss = function (filename) {
     .indexOf(path.extname(filename)) > -1;
 };
 
-exports.isJs = function (filename) {
+exports.isJs = (filename) => {
     return [
         '.js'
     ]
     .indexOf(path.extname(filename) || '.js') > -1;
 };
 
-exports.isImage = function (filename) {
+exports.isImage = (filename) => {
     return [
         '.png',
         '.jpeg'
@@ -38,15 +38,15 @@ exports.isImage = function (filename) {
     .indexOf(path.extname(filename)) > -1;
 };
 
-exports.isOther = function (filename) {
+exports.isOther = (filename) => {
     return !exports.isJs(filename)
         && !exports.isCss(filename)
         && !exports.isHtml(filename)
         && !exports.isImage(filename);
 };
 
-exports.type = function (filename) {
-    var extname = '';
+exports.type = (filename) => {
+    let extname = '';
     if (exports.isJs(filename)) {
         extname = 'js';
     }

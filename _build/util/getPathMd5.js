@@ -6,6 +6,6 @@
  */
 var path = require('path');
 
-module.exports = function (output, md5) {
+module.exports = (output, md5) => {
     return output.split('.')[0] + '_' + md5 + path.extname(output);
 };

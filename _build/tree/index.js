@@ -28,7 +28,7 @@ exports.parse = require('./lib/parse');
  * @property builder {fun}
  * @property md5list {object} 发布之前的md5列表， 根据此列表判断是否增量发布
  */
-exports.build = require('./lib/build');
+exports.buildTree = require('./lib/build');
 
 /**
  * 输出依赖关系
@@ -50,4 +50,12 @@ exports.printDependence = require('./lib/printDependency');
  * @params tree {object}
  * @params path 输出路径
  */
-exports.printMd5list = require('./lib/printMd5list');
+exports.printMd5Cache = require('./lib/printMd5Cache');
+
+/**
+ * 输出内容
+ *
+ * @params path 输出路径
+ * @params content 输出内容
+ */
+exports.write = require('./lib/write');

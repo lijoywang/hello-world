@@ -11,12 +11,17 @@ var write = require('./write');
  * @params tree {object}
  * @params path {string} 输出路径
  */
-module.exports = function (tree, path) {
-    var md5list = { };
+module.exports = (tree, path) => {
+    var md5list = {};
 
     tree.forEach(function (node) {
-        md5list[node.filename] = node;
-    });
+        md5list[node.filename] = {
+            bmd5: node.bmd5,
+            amd5: node.amd5
+        };
 
-    write(path, JSON.stringify(md5list));
+    });
+    if (path) {
+        write(path, JSON.stringify(md5list));
+    }
 };

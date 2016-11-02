@@ -4,13 +4,13 @@
  * @author lijun
  * @date 16/10/24
  */
-var write = require("write");
+const write = require("write");
 
-module.exports = function (path, content) {
+module.exports = (path, content) => {
     write(
         path,
         content,
-        function (error) {
+        (error) => {
             if (error) {
                 console.log('write file is error');
             }

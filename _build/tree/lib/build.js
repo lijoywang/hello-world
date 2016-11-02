@@ -4,26 +4,40 @@
  * @author lijun
  * @date 16/10/26
  */
-var write = require('./write');
-var getPathMd5 = require('./getPathMd5');
+const write = require('./write');
+const printMd5Cache = require('./printMd5Cache');
+const noop = require('./noop');
+const readSync = require('./readSync');
 
-module.exports = function (options) {
-    var tree = options.tree;
-    var md5Cache = options.md5Cache || {};
-    var builder = options.builder;
+// TODO 增量发布bug
+/**
+ * 树节点构建器
+ *
+ * @params options {object}
+ * @property tree {object} 节点树
+ * @property builder {function} 节点构建器
+ * @property mad5path {string} md5缓存列表数据
+ * @property complete {function}
+ */
+module.exports = options => {
+    let {tree, builder = noop, complete = noop, md5path} = options;
 
-    var getMd5Target = function (filename) {
-        return md5Cache[filename] || { };
-    };
+    let md5Cache = {};
+    if (md5path) {
+        let json = readSync(md5path);
+        if (json) {
+            md5Cache = JSON.parse(json);
+        }
+    }
 
+    let getMd5Target = (filename) => md5Cache[filename] || { };
     // 判断当前文件是否需要重新编译
     // 1.判断所有子节点是否需要编译，如果有任何一个子节点编译，那当前父节点都要重新编译
     // 2.判断当前节点是否需要重新编译，根据当前节点的bmd5与cache bmd5相对比
-    var isBuild = function (node) {
-        var boolean = false;
-        var childMap = node.childMap;
+    let isBuild = (node) => {
+        let [boolean, childMap] = [false, node.childMap];
         if (childMap.size) {
-            childMap.forEach(function (childNode) {
+            childMap.forEach(childNode => {
                 if (getMd5Target(childNode.filename).amd5 !== childNode.amd5) {
                     boolean = true;
                     return false;
@@ -37,14 +51,26 @@ module.exports = function (options) {
         return getMd5Target(node.filename).bmd5 !== node.bmd5;
     };
 
-    var noticeParents = function (node) {
-        var parentMap = node.parentMap;
+    // 所有node的根节点完成，则回调complete方法
+    let isComplete = () => {
+        var boolean = true;
+        tree.forEach((node) => {
+            if (!node.builed) {
+                boolean = false;
+                return false;
+            }
+        });
+        return boolean;
+    }
+
+    let noticeParents = (node) => {
+        let parentMap = node.parentMap;
         if (parentMap.size) {
-            parentMap.forEach(function (parentNode) {
-                var childMap = parentNode.childMap;
+            parentMap.forEach((parentNode) => {
+                let childMap = parentNode.childMap;
                 // 所有子节点是否已build完成
-                var allBuiled = true;
-                childMap.forEach(function (node) {
+                let allBuiled = true;
+                childMap.forEach((node) => {
                     if (!node.builed) {
                         allBuiled = false;
                         return false;
@@ -58,20 +84,20 @@ module.exports = function (options) {
         }
         else {
             // 根节点
+            if (isComplete()) {
+                if (md5path) {
+                    printMd5Cache(tree, md5path);
+                }
+                complete();
+            }
         }
     };
 
-    var build = function (node) {
+    let build = node => {
         if (isBuild(node)) {
             builder(node)
-            .then(function () {
+            .then((boolean) => {
                 node.builed = true;
-                // 输出文件
-                var output = node.output;
-                // output 路径不存在，说明不是入口文件，不需要输出
-                if (output) {
-                    write(getPathMd5(output, node.amd5), node.content);
-                }
                 noticeParents(node);
             });
         }
@@ -84,7 +110,7 @@ module.exports = function (options) {
     };
 
     if (tree.size) {
-        tree.forEach(function (node) {
+        tree.forEach(node => {
             // 叶子节点
             if (!node.childMap.size) {
                 build(node);

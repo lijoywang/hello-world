@@ -4,6 +4,6 @@
  * @author lijun
  * @date 16/10/26
  */
-module.exports = function (value) {
+module.exports = (value) => {
     return null;
 };

@@ -6,7 +6,7 @@
  */
 var crypto = require('crypto');
 
-module.exports = function (content) {
+module.exports = (content) => {
     var md5 = crypto.createHash('md5')
         .update(content);
 
