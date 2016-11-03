@@ -9,7 +9,6 @@ const printMd5Cache = require('./printMd5Cache');
 const noop = require('./noop');
 const readSync = require('./readSync');
 
-// TODO 增量发布bug
 /**
  * 树节点构建器
  *
@@ -30,25 +29,35 @@ module.exports = options => {
         }
     }
 
-    let getMd5Target = (filename) => md5Cache[filename] || { };
+    let md5Target = (filename) => md5Cache[filename] || { };
     // 判断当前文件是否需要重新编译
     // 1.判断所有子节点是否需要编译，如果有任何一个子节点编译，那当前父节点都要重新编译
     // 2.判断当前节点是否需要重新编译，根据当前节点的bmd5与cache bmd5相对比
     let isBuild = (node) => {
-        let [boolean, childMap] = [false, node.childMap];
-        if (childMap.size) {
-            childMap.forEach(childNode => {
-                if (getMd5Target(childNode.filename).amd5 !== childNode.amd5) {
-                    boolean = true;
-                    return false;
-                }
-            });
-        }
-        if (boolean) {
-            return true;
-        }
-
-        return getMd5Target(node.filename).bmd5 !== node.bmd5;
+        let md5 = md5Target(node.filename);
+        // TODO
+        return true;
+        //if (!md5.amd5
+        //    || md5.bmd5 !== node.bmd5
+        //) {
+        //    return true;
+        //}
+        //
+        //let [boolean, childMap] = [false, node.childMap];
+        //if (childMap.size) {
+        //    childMap.forEach(childNode => {
+        //        let childMd5 = md5Target(childNode.filename);
+        //
+        //
+        //        if (!childMd5.amd5
+        //            || childMd5.bmd5 !== childNode.bmd5
+        //        ) {
+        //            boolean = true;
+        //            return false;
+        //        }
+        //    });
+        //}
+        //return boolean;
     };
 
     // 所有node的根节点完成，则回调complete方法
@@ -104,7 +113,7 @@ module.exports = options => {
         else {
             node.builed = true;
             // 替换当前amd5
-            node.amd5 = getMd5Target(node.filename).amd5;
+            node.amd5 = md5Target(node.filename).amd5;
             noticeParents(node);
         }
     };
