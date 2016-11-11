@@ -34,10 +34,10 @@ module.exports = options => {
     // 1.判断所有子节点是否需要编译，如果有任何一个子节点编译，那当前父节点都要重新编译
     // 2.判断当前节点是否需要重新编译，根据当前节点的bmd5与cache bmd5相对比
     let isBuild = (node) => {
-        let md5 = md5Target(node.filename);
-        // TODO
         return true;
-        //if (!md5.amd5
+        //let md5 = md5Target(node.filename);
+        //
+        //if (md5.amd5
         //    || md5.bmd5 !== node.bmd5
         //) {
         //    return true;
@@ -48,9 +48,7 @@ module.exports = options => {
         //    childMap.forEach(childNode => {
         //        let childMd5 = md5Target(childNode.filename);
         //
-        //
-        //        if (!childMd5.amd5
-        //            || childMd5.bmd5 !== childNode.bmd5
+        //        if (childMd5.bmd5 !== childNode.bmd5
         //        ) {
         //            boolean = true;
         //            return false;

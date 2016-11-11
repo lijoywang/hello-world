@@ -1,0 +1,282 @@
+@import 'dep/icomoon/pc/0.0.1/style.styl'
+@import 'common/mixin.styl'
+@import './variable.styl'
+
+#app
+    padding-top 35px
+
+.icon
+    display inline-block
+
+body
+
+    background-color $brand-bg
+
+    &.dragging
+        user-select none
+
+    > .tooltip
+        border-color #444
+        background-color #666
+        color #fff
+
+        &:before
+            border-color #444
+
+        &:after
+            border-color #666
+
+.tip-message
+    background-color #f8f8f8
+    border 0
+    border-bottom 1px solid $brand-border
+    width 100%
+    text-align center
+    position fixed
+    left 0
+    top -35px
+    z-index $zindex-huge + 1
+    transition all 0.4s
+
+    > .close
+        float right
+        cursor pointer
+
+    &.active
+        top 0
+
+.input-group
+    .label.muted
+        border-color $brand-border
+
+.pagination.tight
+    .ellipsis
+        margin 0 8px !important
+
+.centered
+    text-align center
+
+.hidden
+    display none
+
+#nav,
+#header,
+#menu,
+#breadcrumb,
+#main,
+#footer
+    > .wrapper
+        width $page-width
+        margin 0 auto
+
+#nav
+    background-color #f4f4f4
+    border-bottom 1px solid $brand-border
+    font-size 90%
+    padding 7px 0
+    user-select none
+
+    position absolute
+    left 0
+    right 0
+    top 0
+
+    .link + .link
+        margin-left 10px
+
+    .quit
+        margin-left 8px !important
+
+    .account-info
+        margin-right 20px
+
+    .icon
+        color $brand-primary
+        margin-right 5px
+
+
+#header
+
+    background-color #FFF
+    padding 15px 0
+
+    .logo
+        background url(./img/logo.png) no-repeat
+        background-image -webkit-image-set(url(./img/logo.png) 1x,url(./img/logo@2x.png) 2x)
+
+        display inline-block
+        width 120px
+        height 50px
+        vertical-align middle
+
+    h1
+        border-left 1px solid $brand-border
+        display inline-block
+        font-size 22px
+        margin 0 0 0 10px
+        padding-left 10px
+        vertical-align middle
+
+#menu
+    background-color $brand-primary
+
+    .tabs
+        > .floated
+            float right
+
+    .tab
+    .button
+        color #FFF
+
+    .tab
+        &:hover
+            background-color darken($brand-primary, 5%)
+        &:active
+            background-color darken($brand-primary, 10%)
+        &.checked
+            &:after
+                content ' '
+                position absolute
+                bottom 0
+                left 50%
+                margin-left -8px
+                border 8px solid transparent
+                border-bottom-color $brand-bg
+
+#breadcrumb
+
+    padding 9px 0
+
+    .link,
+    .text
+        color $brand-text-darker
+
+    .link:hover
+        color $brand-primary
+
+    .separator
+        margin 0 5px
+
+.card
+    background-color #FFF
+    box-shadow 0px 0px 4px rgba(0,0,0,0.05)
+
+    + .card
+        margin-top 15px
+
+#main > .wrapper
+    clearfix()
+
+#sidebar
+    float left
+    width 188px
+    padding 10px 20px
+
+    .menu
+        padding 4px 0
+
+    .menu + .menu
+        border-top 1px dashed $brand-divider
+
+    .menu > .title
+        padding 6px 18px
+        color $brand-text-darker
+
+        &.link:hover
+            color $brand-primary
+
+    .sub-menu > .link
+        padding 4px 18px
+
+        &:first-child
+            padding-top 0
+
+    .menu > .link,
+    .sub-menu > .link
+        position relative
+        &:before
+            content ' '
+            display none
+            position absolute
+            left 0
+            border-style solid
+            border-color transparent
+            border-left-color $brand-primary
+
+        &:hover,
+        &.checked
+            color $brand-primary
+            &:before
+                display block
+
+        &.checked
+            font-weight bold
+
+    .menu > .link:before
+        border-width 6px
+        bottom 14px
+
+    .sub-menu > .link:before
+        border-width 5px
+        bottom 9px
+
+#container
+    margin-left 203px
+
+#footer
+    margin-top 30px
+    padding-top 30px
+    border-top 1px solid $brand-border
+    background-color #FFF
+
+    .service
+        float right
+        width 300px
+        text-align center
+
+        > .icon
+            font-size 50px
+
+        > h4
+            font-size 30px
+            line-height 48px
+            color #000
+            font-weight normal
+            margin 0
+
+    .detail
+
+        clearfix()
+
+        h4
+            margin 0 0 5px
+
+        > div
+            border-right 1px solid $brand-divider
+            float left
+            width 170px
+            height 157px
+            padding-left 30px
+
+        li
+            padding 2px 0
+
+    .copyright
+        text-align center
+        border-top 1px solid $brand-border
+        margin-top 20px
+        padding 20px 0
+
+.wechat-qrcode-dialog
+    .table
+        width auto
+
+    > .body
+        padding 20px
+        padding-top 10px
+
+.wechat-qrcode
+    width 361px
+    height 160px
+    background url(./img/qrcode-wechat.png) no-repeat
+    background-image -webkit-image-set(url(./img/qrcode-wechat.png) 1x,url(./img/qrcode-wechat@2x.png) 2x)

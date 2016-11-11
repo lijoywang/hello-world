@@ -1,0 +1,80 @@
+
+/**
+ * 清除浮动
+ */
+clearfix()
+    &:before,
+    &:after
+        content " "
+        display table
+
+    &:after
+        clear both
+
+    zoom 1
+
+/**
+ * 文本结尾加省略号
+ */
+text-overflow()
+    overflow hidden
+    text-overflow ellipsis
+    white-space nowrap
+
+/**
+ * 文本自然换行
+ */
+word-break()
+    word-break break-all
+    word-wrap break-word
+    white-space normal
+
+px2rem(value)
+    return (value / 75) rem
+
+px2px(name, value)
+    {name} round(0.5 * value) px
+
+/**
+ * 发丝线
+ */
+hairline(color, direction = false)
+    if direction
+        .hairline &
+            border-{direction} 0.5px solid color
+
+        .no-hairline &
+            position relative
+            &:before
+                content ' '
+                background-color color
+                position absolute
+                {direction} 0
+
+                if direction == 'left' || direction == 'right'
+                    width 1px
+                    transform scaleX(0.5)
+                    top 0
+                    bottom 0
+                else
+                    height 1px
+                    transform scaleY(0.5)
+                    left 0
+                    right 0
+
+    else
+        .hairline &
+            border 0.5px solid color
+        .no-hairline &
+            box-shadow 0 0 0 0.5px color
+
+/**
+ * 居中定位
+ */
+center(way)
+    position way
+    left 50%
+    top 50%
+    transform translate(-50%, -50%)
+
+

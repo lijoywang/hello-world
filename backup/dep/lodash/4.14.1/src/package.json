@@ -1,0 +1,107 @@
+{
+  "_args": [
+    [
+      "lodash-amd",
+      "/Users/zhujl/github/passport-fe"
+    ]
+  ],
+  "_from": "lodash-amd@*",
+  "_id": "lodash-amd@4.14.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/lodash-amd",
+  "_nodeVersion": "4.2.4",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/lodash-amd-4.14.1.tgz_1469803798225_0.21194602875038981"
+  },
+  "_npmUser": {
+    "email": "john.david.dalton@gmail.com",
+    "name": "jdalton"
+  },
+  "_npmVersion": "2.15.9",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "lodash-amd",
+    "raw": "lodash-amd",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "*",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/lodash-amd/-/lodash-amd-4.14.1.tgz",
+  "_shasum": "960bd031fe7d2ce80e1fd3950f546b95009871c2",
+  "_shrinkwrap": null,
+  "_spec": "lodash-amd",
+  "_where": "/Users/zhujl/github/passport-fe",
+  "author": {
+    "email": "john.david.dalton@gmail.com",
+    "name": "John-David Dalton",
+    "url": "http://allyoucanleet.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/lodash/lodash-cli/issues"
+  },
+  "contributors": [
+    {
+      "name": "John-David Dalton",
+      "email": "john.david.dalton@gmail.com",
+      "url": "http://allyoucanleet.com/"
+    },
+    {
+      "name": "Blaine Bublitz",
+      "email": "blaine.bublitz@gmail.com",
+      "url": "https://github.com/phated"
+    },
+    {
+      "name": "Mathias Bynens",
+      "email": "mathias@qiwi.be",
+      "url": "https://mathiasbynens.be/"
+    }
+  ],
+  "dependencies": {},
+  "description": "Lodash exported as AMD modules.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "960bd031fe7d2ce80e1fd3950f546b95009871c2",
+    "tarball": "https://registry.npmjs.org/lodash-amd/-/lodash-amd-4.14.1.tgz"
+  },
+  "homepage": "https://lodash.com/custom-builds",
+  "keywords": [
+    "amd",
+    "modules",
+    "stdlib",
+    "util"
+  ],
+  "license": "MIT",
+  "main": "main.js",
+  "maintainers": [
+    {
+      "name": "jdalton",
+      "email": "john.david.dalton@gmail.com"
+    },
+    {
+      "name": "mathias",
+      "email": "mathias@qiwi.be"
+    },
+    {
+      "name": "phated",
+      "email": "blaine@iceddev.com"
+    }
+  ],
+  "name": "lodash-amd",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lodash/lodash.git"
+  },
+  "scripts": {
+    "test": "echo \"See https://travis-ci.org/lodash/lodash-cli for testing details.\""
+  },
+  "version": "4.14.1"
+}
