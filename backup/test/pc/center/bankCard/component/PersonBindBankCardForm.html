@@ -1,0 +1,127 @@
+<div class="person-bind-card-form">
+
+    <div class="form">
+        <div class="group">
+            <div class="label">
+                姓名：
+            </div>
+            <div class="controls">
+                {{#if options.userNameReadOnly && options.userName}}
+                    <div class="label">
+                        {{options.userName}}
+                    </div>
+                    <input type="hidden" name="{{userNameInputOptions.name}}" value="{{userNameInputOptions.value}}">
+                {{else}}
+                    <Input options="{{userNameInputOptions}}" />
+                {{/if}}
+            </div>
+        </div>
+        <div class="group">
+            <div class="label">
+                身份证：
+            </div>
+            <div class="controls">
+                {{#if options.userIdReadOnly && options.userId}}
+                    <div class="label">
+                        {{options.userId}}
+                    </div>
+                    <input type="hidden" name="{{userIdInputOptions.name}}" value="{{userIdInputOptions.value}}">
+                {{else}}
+                    <Input options="{{userIdInputOptions}}" />
+                {{/if}}
+            </div>
+        </div>
+        <div class="group">
+            <div class="label">
+                银行卡号：
+            </div>
+            <div class="controls">
+                <div class="input-group">
+                    <Input options="{{bankCardNumberInputOptions}}" />
+                </div>
+            </div>
+        </div>
+
+        {{#if options.bindType == BIND_TYPE_NEW_PAY}}
+        <div class="group">
+            <div class="label">
+                银行卡类型：
+            </div>
+            <div class="controls">
+                <div class="radios">
+                    <label class="radio label">
+                        <input type="radio" name="{{bankCardType}}" value="{{BANK_CARD_TYPE_DEPOSITS}}">
+                        储蓄卡
+                    </label>
+                    <label class="radio label">
+                        <input type="radio" name="{{bankCardType}}" value="{{BANK_CARD_TYPE_CREDIT}}">
+                        信用卡
+                    </label>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+
+        <div class="group">
+            <div class="label">
+                所属银行：
+            </div>
+            <div class="controls">
+                <Select options="{{bankSelectOptions}}" />
+            </div>
+        </div>
+
+        {{#if bankCardType == BANK_CARD_TYPE_CREDIT}}
+        <div class="group">
+            <div class="label">
+                卡验证码：
+            </div>
+            <div class="controls">
+                <Input options="{{cvvInputOptions}}" />
+            </div>
+        </div>
+        <div class="group">
+            <div class="label">
+                有效期：
+            </div>
+            <div class="controls">
+                <DateSelect options="{{expireDateSelectOptions}}" />
+            </div>
+        </div>
+        {{/if}}
+        <div class="group">
+            <div class="label">
+                开户行地区：
+            </div>
+            <div class="controls">
+                <AddressSelect options="{{bankLocationOptions}}" />
+                <div class="inline">
+                    <i class="icon text info icon-question-circle" data-title="请填写银行卡开户行所在地区"></i>
+                </div>
+            </div>
+        </div>
+        <div class="group">
+            <div class="label">
+                预留手机号：
+            </div>
+            <div class="controls">
+                <Input options="{{userMobileInputOptions}}" />
+                <div class="inline">
+                    <i class="icon text info icon-question-circle" data-title="银行预留的手机号是办理该银行卡时所填写的手机号码。没有预留、手机号忘记或者已停用，请联系银行客服更新处理。" data-max-width="20em"></i>
+                </div>
+            </div>
+        </div>
+        <div class="group">
+            <div class="label">
+                手机验证码：
+            </div>
+            <div class="controls">
+                <Input options="{{verifyCodeInputOptions}}" />
+                <CodeButton options="{{codeButtonOptions}}"  />
+            </div>
+        </div>
+    </div>
+    <style>
+        {{style}}
+    </style>
+</div>

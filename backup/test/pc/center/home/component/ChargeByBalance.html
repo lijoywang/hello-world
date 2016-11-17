@@ -1,0 +1,49 @@
+<div class="form charge-by-balance">
+
+    <div class="group">
+        <div class="label">
+            账户余额：
+        </div>
+        <div class="controls">
+            <div class="label">
+                ￥{{formatMoney(options.balance)}}
+            </div>
+        </div>
+    </div>
+
+
+    <div class="group">
+        <div class="label">
+            充值金额：
+        </div>
+        <div class="controls">
+            <div class="input-group">
+                <div class="label muted">
+                    ￥
+                </div>
+                <Input options="{{amountInputOptions}}" />
+                <div class="label muted">
+                    元
+                </div>
+            </div>
+            {{#if getChargeRangeHint()}}
+            <small class="inline muted">
+                {{getChargeRangeHint()}}
+            </small>
+            {{/if}}
+        </div>
+    </div>
+
+    <div class="group">
+        <div class="label">
+            支付密码：
+        </div>
+        <div class="controls">
+            <Input options="{{payPasswordInputOptions}}" />
+        </div>
+    </div>
+
+    <style>
+        {{style}}
+    </style>
+</div>

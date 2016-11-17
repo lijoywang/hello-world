@@ -1,0 +1,14 @@
+<div class="withdraw-bank-card-list">
+    {{#each options.list:index}}
+    <BankCard options="{{.}}" index="{{index}}" />
+    {{else}}
+    <div class="bind-card" on-click="add">
+        <i class="icon icon-plus"></i>
+        添加银行卡
+    </div>
+    {{/each}}
+
+    <style>
+        {{style}}
+    </style>
+</div>

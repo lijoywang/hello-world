@@ -2,28 +2,604 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bca3a4b0-54a0-4ebf-99f4-58db402f4831" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/builder.js" afterPath="$PROJECT_DIR$/backup/build/builder.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/builder/css.js" afterPath="$PROJECT_DIR$/backup/build/builder/css.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/builder/font.js" afterPath="$PROJECT_DIR$/backup/build/builder/font.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/builder/html.js" afterPath="$PROJECT_DIR$/backup/build/builder/html.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/builder/image.js" afterPath="$PROJECT_DIR$/backup/build/builder/image.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/builder/js.js" afterPath="$PROJECT_DIR$/backup/build/builder/js.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/builder/other.js" afterPath="$PROJECT_DIR$/backup/build/builder/other.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/config.js" afterPath="$PROJECT_DIR$/backup/build/config.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/log.js" afterPath="$PROJECT_DIR$/backup/build/log.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/tasks/amd.js" afterPath="$PROJECT_DIR$/backup/build/tasks/amd.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/tasks/cssResolve.js" afterPath="$PROJECT_DIR$/backup/build/tasks/cssResolve.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/tasks/generate.js" afterPath="$PROJECT_DIR$/backup/build/tasks/generate.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/tasks/htmlRename.js" afterPath="$PROJECT_DIR$/backup/build/tasks/htmlRename.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/tasks/rename.js" afterPath="$PROJECT_DIR$/backup/build/tasks/rename.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/tasks/write.js" afterPath="$PROJECT_DIR$/backup/build/tasks/write.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/tool/biz.js" afterPath="$PROJECT_DIR$/backup/build/tool/biz.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/tool/feTree.js" afterPath="$PROJECT_DIR$/backup/build/tool/feTree.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/tool/fileExports.js" afterPath="$PROJECT_DIR$/backup/build/tool/fileExports.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/tool/isDep.js" afterPath="$PROJECT_DIR$/backup/build/tool/isDep.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/tool/manifestEdit.js" afterPath="$PROJECT_DIR$/backup/build/tool/manifestEdit.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build/tool/util.js" afterPath="$PROJECT_DIR$/backup/build/tool/util.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_build/tree/lib/build.js" afterPath="$PROJECT_DIR$/_build/tree/lib/build.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/emoji/images/emoji_appearance.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/emoji/images/emoji_cry.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/emoji/images/emoji_doubt.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/emoji/images/emoji_embarrassed.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/emoji/images/emoji_exhausted.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/emoji/images/emoji_giggle.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/emoji/images/emoji_heartstopper.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/emoji/images/emoji_naughty.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/emoji/images/emoji_owl@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/emoji/images/emoji_powerful.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/emoji/images/emoji_proud.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/emoji/images/emoji_smile.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/emoji/images/emoji_speechless.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/emoji/images/emoji_struggle.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/emoji/images/emoji_surprise.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/emoji/images/emoji_weighs.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/emoji/images/emoji_worship.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/imgs/expression.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/_common/footer/footer-tip.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/_common/nav_bar/ic_ask.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/_common/nav_bar/ic_hc_donwload_n@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/imgs/icon-upload.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/course/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/imgs/icon_loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/iconfont/0.0.2/iconfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.1/m-fe-all.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.1/fonts/m-fe-all.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.2/fonts/m-fe-all.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.3/fonts/m-fe-all.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.4/fonts/m-fe-all.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.5/fonts/m-fe-all.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/phpstorm_settings_mac.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/imgs/picture.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/imgs/zhucn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/01-default.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/02-responsive.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/03-vertical.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/04-space-between.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/05-slides-per-view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/06-slides-per-view-auto.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/07-centered.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/08-centered-auto.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/09-freemode.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/10-slides-per-column.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/11-nested.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/12-grab-cursor.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/13-scrollbar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/14-nav-arrows.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/15-infinite-loop.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/16-effect-fade.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/17-effect-cube.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/18-effect-coverflow.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/19-keyboard-control.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/20-mousewheel-control.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/21-autoplay.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/22-dynamic-slides.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/23-thumbs-gallery-loop.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/23-thumbs-gallery.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/24-multiple-swipers.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/25-hash-navigation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/26-rtl.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/27-jquery.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/28-parallax.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/29-custom-pagination.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/30-lazy-load-images.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/31-custom-plugin.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/32-scroll-container.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/33-responsive-breakpoints.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/34-autoheight.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/35-effect-flip.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/36-pagination-fraction.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/demos/37-pagination-progress.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/ui/BasePopupDiv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/ui/CodeButton.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/ControlVerticalLayout.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/Controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/ui/Dialog/Dialog.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/ui/Dialog/Dialog.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/ui/Dialog/Dialog.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/mvc-tools/DomSize.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/ui/FullPageDialog/FullPageDialog.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/mvc-tools/IdleControl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/ui/ImageCheckCodeDialog/ImageCheckCodeDialog.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/ui/ImageCheckCodeDialog/ImageCheckCodeDialog.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/ui/ImageCheckCodeDialog/ImageCheckCodeDialog.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/ui/ImagePlayer/ImagePlayer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/ui/LoginDialog/LoginDialog.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/mvc/MVCArray.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/mvc/MVCObject.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/MessageRender.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/ui/NavPanel/NavPanel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/ui/NavPanel/NavPanel.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/ui/NavPanel/NavPanel.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/ui/PageMask/PageMask.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/PollingMessage.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.1/Read Me.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.2/Read Me.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.3/Read Me.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.4/Read Me.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.5/Read Me.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/mvc-tools/SlideInDialog/SlideInDialog.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/mvc-tools/SlideInDialog/SlideInDialog.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/Smarty.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/SmartyBC.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/wenda/SupportAjax.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/_base/parts_base/TDK.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/ui/TextTip/TextTip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/ui/TextTip/TextTip.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/Timer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/_page_init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/a11y.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/aaa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/wenda/addAnswerAjax.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/comment/addComment.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/business_school/addConsult.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/comment/addInvitedComment.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/article/affiliated.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/agent.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/582110258/ajax_article_list.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/jianghualaoshi/ajax_article_list.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/qq123123123123/ajax_article_list.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/yangyongxi/ajax_article_list.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/582110258/ajax_comment.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/gaofenlaocao/ajax_comment.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/jianghualaoshi/ajax_comment.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/yangyongxi/ajax_comment.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/teacher/ajax_comment_select.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/teacher/ajax_comment_selected.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/teacher/ajax_focus.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/582110258/ajax_photo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/jianghualaoshi/ajax_photo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/yangyongxi/ajax_photo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/_build/tasks/amd.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/amd.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/analysis.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/wenda/answerAcceptAjax.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/wx/api.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/share/parts/appShare.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/app_config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/app_download.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/app_init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/app_logs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/app_wakeup.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/appoint/appoint.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/appoint/appoint.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/util/array.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/wenda/askQuestion.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/wenda/askQuestionAjax.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/autoresponse-config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/backTopButton.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/util/base.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/_base/base.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/_base/base.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/_base/base_default.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/batch_event.gif.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/activity/bigshot_coupon.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/activity/bigshot_share.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/student/vip/bind.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/studentVip/vip/bind.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/student_vip/bind.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/bindCourseClick.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/wenda/bindPhone.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/_build/tool/biz.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/block.textformat.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/bootstrap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/build-norelease.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/build.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/build" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/_build/builder.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/fenqi/checkAuth.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/pay/checkClassOrder.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/api/check_app_update.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/punch_sign/checkin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/chengduSem.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/student/vip/childClass.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/student_vip/childClass.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/ci.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/city_mgr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/parent/class.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/_common/comment.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/article_comment/comments.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/conf5.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/_build/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/wx/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/recommend/confirm_fill.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/controller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/util/cookie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/core.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/less/core.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/countDown/countDown.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/countDown/countDown.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/countDown/countDown.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/activity/cps_confirm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/activity/cps_org_confirm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/activity/cps_org_login.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/student_advisory/create.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/pay/createProductPurchase.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/_build/builder/css.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/_build/tasks/cssResolve.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/order/customerLeave.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/debug.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.1/demo-files/demo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.2/demo-files/demo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.3/demo-files/demo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.4/demo-files/demo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.5/demo-files/demo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/iconfont/0.0.2/demo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.1/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.2/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.3/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.4/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.5/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/iconfont/0.0.2/demo.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.1/demo-files/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.2/demo-files/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.3/demo-files/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.4/demo-files/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.5/demo-files/demo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/help/lazyLoadImage/demo1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/help/lazyLoadImage/demo2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/help/lazyLoadImage/demo3.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/help/lazyLoadImage/demo4.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/help/lazyLoadImage/demo5.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/share/doShare.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/share/doSharePanel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/dom-plugins.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/dom.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/util/dom.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/_base/parts_base/domain.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/edp-webserver-config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/edp-webserver-tpl-mock.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/effects.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/less/effects.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/emitter.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/emoji/emoji.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/emoji/emoji.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/account/empty.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/enterClassRoom.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/util/env.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/errconf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/wx/exif.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/_build/tool/feTree.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/_build/tool/fileExports.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/_build/builder/font.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/_common/footer/footer.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/_common/footer/footer.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/format.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/function.counter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/function.cycle.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/function.fetch.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/function.html_checkboxes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/function.html_image.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/function.html_options.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/function.html_radios.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/function.html_select_date.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/function.html_select_time.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/function.html_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/util/function.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/function.json.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/function.mailto.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/function.math.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/ga/ga.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/short_url/gen.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/_build/tasks/generate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/get-dom-lib.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/get-jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/im/getAnonymousInfo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/k12/getClassifyCourses.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/comment/getCourseComments.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/student_center/getFutureAndProcessingCourses.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/getImgCode.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/im/getKefuGreet.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/comment/getMoreCommentAjax.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/hermes/getMsg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/hermes/getMyContacts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/tcenter/foundation/storage/getVideoInfo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/v2/get_update_time.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/gulpfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/hashnav.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/help/help.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/_build/builder/html.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/_build/tasks/htmlRename.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/iconfont/0.0.2/iconfont.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/iconfont/0.0.2/iconfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/iconfont/0.0.1/iconfont.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/iconfont/0.0.2/iconfont.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/iconfont/0.0.2/iconfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/iconfont/0.0.2/iconfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/imConfig.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/_build/builder/image.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/help/app/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/help/lazyLoadImage/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/playground/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/mock/index.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/css/index.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/index.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/student_center/index4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/share/initialize.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/input.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/uk/insert.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/interest/instruct_test_result.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/interest/activity/instruct_test_result.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/src/page/activity/interestAnswer/instruct_test_result.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/_base/css/interfaces.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/resource/iosReviewVersion.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/_build/tool/isDep.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/iscroll/iscroll.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/jockey/jockey.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/_build/builder/js.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/keyboard.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/lazy-load.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/lazyLoadImage.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/area/list.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/parent/list.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/src/page/activity/ce_contest/apply/area/list.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/liudanClickLog/liudanClickLog.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/livereload.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/util/loadScript.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/loader.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/local-build.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/_build/log.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/log4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/auth/loginSms.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.2/fonts/m-fe-all.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.1/m-fe-all.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.1/fonts/m-fe-all.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.2/fonts/m-fe-all.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.3/fonts/m-fe-all.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.4/fonts/m-fe-all.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.5/fonts/m-fe-all.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.1/m-fe-all.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.1/fonts/m-fe-all.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.2/fonts/m-fe-all.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.3/fonts/m-fe-all.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.4/fonts/m-fe-all.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.5/fonts/m-fe-all.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/manifest.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/_build/tool/manifestEdit.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/util/math.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/css/message.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/less/mixins.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/mock/mock.php.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/mock.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifier.capitalize.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifier.cn_truncate.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifier.date_format.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifier.debug_print_var.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifier.escape.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifier.regex_replace.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifier.replace.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifier.spacify.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifier.truncate.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifiercompiler.cat.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifiercompiler.count_characters.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifiercompiler.count_paragraphs.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifiercompiler.count_sentences.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifiercompiler.count_words.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifiercompiler.default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifiercompiler.escape.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifiercompiler.from_charset.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifiercompiler.indent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifiercompiler.lower.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifiercompiler.noprint.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifiercompiler.string_format.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifiercompiler.strip.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifiercompiler.strip_tags.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifiercompiler.to_charset.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifiercompiler.unescape.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifiercompiler.upper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/modifiercompiler.wordwrap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/mousewheel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/hermes/myContacts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/_common/nav_bar/nav_bar.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/_common/nav_bar/nav_bar.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/less/navigation-f7.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/less/navigation.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/gaokao/news_ajax.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/_base/css/normalize.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/util/number.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/util/object.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/mvc/observer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/openAppDialog/open400TelDialog.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/openAppDialog/open400TelDialog.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/openAppDialog/openAppDialog.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/openAppWindow.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/_build/builder/other.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/outputfilter.trimwhitespace.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/package.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/page.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/page.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/_base/parts_base/page_init.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/page_layout.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/parallax.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/_common/parseUrl.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/course/platform-support.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/course/platform-support.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/requirejs/plugin_text.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/plugins.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/hermes/polling.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/less/preloader-f7.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/less/preloader.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/mvc/publish.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/share/parts/qqShare.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/qrcode.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/punch_sign/rank.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/uk/rank_ajax.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/_build/tasks/rename.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/mstat/report.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/requirejs/require.debug.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/requirejs/require.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/scrollbar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/less/scrollbar.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.1/selection.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.2/selection.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.3/selection.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.4/selection.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.5/selection.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/sms/send.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/studentVip/sms/send.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/hermes/sendMsg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/user/setPushInfo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/share/parts/shareStore.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/shared.escape_special_chars.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/shared.literal_compiler_param.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/shared.make_timestamp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/shared.mb_str_replace.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/shared.mb_unicode.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/shared.mb_wordwrap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/ui/ImagePlayer/showImagePlayer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/ui/slideImageControl/slideImageControl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_cacheresource.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_cacheresource_custom.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_cacheresource_keyvaluestore.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_config_source.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_cacheresource_file.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_append.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_assign.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_block.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_break.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_call.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_capture.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_config_load.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_continue.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_debug.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_eval.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_extends.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_for.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_foreach.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_function.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_if.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_include.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_include_php.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_insert.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_ldelim.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_nocache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_private_block_plugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_private_function_plugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_private_modifier.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_private_object_block_function.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_private_object_function.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_private_print_expression.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_private_registered_block.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_private_registered_function.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_private_special_variable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_rdelim.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_section.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_setfilter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compile_while.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_compilebase.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_config_file_compiler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_configfilelexer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_configfileparser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_data.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_debug.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_filter_handler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_function_call_handler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_get_include_path.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_nocache_insert.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_parsetree.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_resource_eval.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_resource_extends.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_resource_file.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_resource_php.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_resource_registered.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_resource_stream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_resource_string.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_smartytemplatecompiler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_template.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_templatebase.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_templatecompilerbase.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_templatelexer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_templateparser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_utility.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_internal_write_file.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_resource.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_resource_custom.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_resource_recompiled.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_resource_uncompiled.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/sysplugins/smarty_security.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/snsconf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/kaoyan/spreadCode.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/starScore/starScore.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/starScore/starScore.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/openAppDialog/startChat.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/util/string.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/_common/stringifyQuery.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/opportunity/student_feedback_post.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.1/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.2/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.3/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.4/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.5/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.1/style.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.2/style.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.3/style.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.4/style.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/icomoon/0.0.5/style.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/article/support.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/article_comment/support.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/comment/supportComment.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/activity/survey_teacher_active_suggest.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/swiper-intro-f7.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/swiper-intro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/swiper-outro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/swiper-proto.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/dist/js/swiper.jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/dist/js/maps/swiper.jquery.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/dist/js/swiper.jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/dist/js/swiper.jquery.umd.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/dist/js/maps/swiper.jquery.umd.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/dist/js/swiper.jquery.umd.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/dist/js/swiper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/less/swiper.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/dist/js/maps/swiper.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/dist/js/swiper.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/dist/css/swiper.min.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/dist/css/swiper.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/_common/swiper/swiper.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/hermes/syncConfig.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/student_center/syncConfig.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/comment/tcomment.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/jianghualaoshi/tcomment.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/src/page/comment/commentDetail/tcomment.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/teacherCenter/tcomment.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/yangyongxi/tcomment.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/wenda/teacherAnswer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/wenda/teacherWendaAjax.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/opportunity/teacher_feedback_post.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/artTemplate/template.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/src/page/activity/ce_contest/list/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/src/page/activity/statistics/active/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/opportunity/third_call_post.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/wx/tpl.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/_base/css/ui-loading.styl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/ui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/wenda/updateSettingStatus.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/logwebrequest/upload.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/src/page/activity/ce_contest/apply/uk/upload.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/uk/upload.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/wx/upload.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/storage/uploadBinaryImage.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/util/url.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/user.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/page/IM/part/user.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/_build/tool/util.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/captcha/validate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock/smarty/plugins/variablefilter.htmlspecialchars.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/uk/vote.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/web-analysis/0.0.2/src/wat.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/web-analysis/0.0.3/wat.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/mock_ajax/user/weixinInfo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/wrap-end-umd.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/wrap-end.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/wrap-start-umd.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/swiper/src/js/wrap-start.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/_build/tasks/write.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/wx/wxInput.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/src/common/share/parts/wxShare.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/zepto/zepto.debug.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/Mobile_Web_FE/lib/zepto/zepto.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hello-world.iws" />
@@ -49,101 +625,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="test2.styl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/test2.styl">
+      <file leaf-file-name="loader.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/loader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="120">
-              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="7665">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_build/tree/lib/build.js">
+      <file leaf-file-name="ga.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backup/Mobile_Web_FE/lib/ga/ga.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1230" max-vertical-offset="2010">
-              <caret line="105" column="28" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/index1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="240">
-              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tab.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backup/dep/cc/1.1.0/src/ui/Tab.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.4" vertical-offset="0" max-vertical-offset="1725">
-              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="task.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backup/build-x/task.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="5385">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edp-build-config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edp-build-config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="960">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/backup/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test4.styl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/test4.styl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="135">
-              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.styl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/test.styl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="135">
-              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index1.styl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/index1.styl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="180">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5954357" vertical-offset="328" max-vertical-offset="810">
+              <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -218,9 +714,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="282" />
-    <option name="y" value="182" />
-    <option name="width" value="1239" />
+    <option name="y" value="23" />
+    <option name="width" value="1235" />
     <option name="height" value="777" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -277,7 +772,73 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="backup" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hello-world" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hello-world" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backup" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mobile_Web_FE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hello-world" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hello-world" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backup" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mobile_Web_FE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hello-world" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hello-world" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backup" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mobile_Web_FE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -401,30 +962,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="282" y="182" width="1239" height="777" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="23" width="1235" height="777" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.232493" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23141655" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329698" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2857143" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2950545" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994374" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -472,29 +1033,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/index.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="150">
-          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backup/build/tool/fileExports.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="42.48" vertical-offset="1302" max-vertical-offset="1710">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backup/build/tasks/cssResolve.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.8" vertical-offset="1560" max-vertical-offset="2235">
-          <caret line="112" column="25" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backup/build/builder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.8" vertical-offset="390" max-vertical-offset="765">
@@ -548,7 +1086,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-24.23077" vertical-offset="0" max-vertical-offset="1065">
           <caret line="42" column="27" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -556,7 +1093,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
           <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -564,7 +1100,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
           <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -572,7 +1107,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -587,7 +1121,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="690">
           <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -602,7 +1135,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -610,7 +1142,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="480">
           <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -618,7 +1149,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.51724136" vertical-offset="555" max-vertical-offset="990">
           <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -626,7 +1156,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
           <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -634,7 +1163,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
           <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -642,7 +1170,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="645">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -650,7 +1177,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
           <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -665,7 +1191,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
           <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -673,7 +1198,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
           <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -681,7 +1205,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="660">
           <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -689,7 +1212,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.807693" vertical-offset="356" max-vertical-offset="765">
           <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -697,7 +1219,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.3461537" vertical-offset="1046" max-vertical-offset="1455">
           <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -719,7 +1240,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1121" max-vertical-offset="1650">
           <caret line="81" column="33" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -727,7 +1247,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
           <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -735,7 +1254,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="54.076923" vertical-offset="1511" max-vertical-offset="1920">
           <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -743,7 +1261,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
           <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -751,7 +1268,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1050">
           <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -766,7 +1282,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="150">
           <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -774,7 +1289,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="150">
           <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -782,7 +1296,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
           <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -790,7 +1303,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="135">
           <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -798,7 +1310,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="135">
           <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -806,7 +1317,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="180">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -814,7 +1324,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="120">
           <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -822,7 +1331,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1230" max-vertical-offset="2010">
           <caret line="105" column="28" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -830,7 +1338,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="240">
           <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -838,7 +1345,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.4" vertical-offset="0" max-vertical-offset="1725">
           <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -846,7 +1352,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5385">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -854,7 +1359,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -862,6 +1366,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backup/m-common/ui/Dialog/Dialog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4995">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/loader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="60" max-vertical-offset="7665">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backup/Mobile_Web_FE/lib/ga/ga.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5954357" vertical-offset="328" max-vertical-offset="810">
+          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
           <folding />
         </state>
       </provider>

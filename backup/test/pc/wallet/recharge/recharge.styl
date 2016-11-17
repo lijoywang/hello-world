@@ -1,0 +1,95 @@
+@import 'pc/common/variable.styl'
+
+.promotion-recharge
+
+    > .header
+        strong
+            margin-left 10px
+
+    > .body
+        padding 20px
+
+    .field
+        margin 15px 0
+
+    .input-hint
+        margin-left 10px
+
+    .bank-hint
+        margin-top 10px
+
+        .icon-info-circle
+            color $brand-info
+            margin-right 5px
+
+    .input-group
+        .input
+            width 93px
+
+    .panel
+        padding 0 20px
+
+    .bank
+        display inline-block
+        border 1px solid $brand-border
+        cursor pointer
+        padding 5px 10px
+        width 170px
+        margin-right 10px
+        margin-top 10px
+        position relative
+        user-select none
+
+        img
+            vertical-align middle
+            margin-right 5px
+
+        .floated
+            border-left 1px solid $brand-border
+            background-color #f8f8f8
+            color #bfbfbf
+            position absolute
+            right 0
+            top 0
+            bottom 0
+            font-size 12px
+            width 1.5em
+            padding 3px
+            line-height 1.2
+
+        &.checked
+            border-color $brand-primary
+            color $brand-primary
+
+            .floated
+                border-color $brand-primary
+                color $brand-primary
+
+    .recharge-success,
+    .recharge-fail
+        > .icon-check-circle,
+        > .icon-info-circle
+            font-size 40px
+            margin-right 10px
+            vertical-align middle
+
+    .recharge-success
+        > .desc
+            display inline-block
+            vertical-align middle
+            line-height 1.4
+
+    .next-step
+        margin-top 15px
+
+    .help
+        margin-top 20px
+        text-align center
+
+        .mascot
+            background url(../img/mascot.jpg) no-repeat 0 0
+            background-image -webkit-image-set(url(../img/mascot.jpg) 1x,url(../img/mascot@2x.jpg) 2x)
+            width 41px
+            height 47px
+            margin-right 10px
+            vertical-align middle

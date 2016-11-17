@@ -1,0 +1,107 @@
+<div class="withdraw">
+
+{{#if success}}
+    <div class="header">
+        提现成功
+    </div>
+
+    <div class="body withdraw-success">
+
+        <h3 class="centered">提现申请已经成功提交！</h3>
+
+        <ul>
+            <li>
+                如无特殊情况，自申请日起 3 - 5 个工作日内，指定账户将收到提款。
+            </li>
+            <li>
+                如果银行信息填写错误，导致提现失败，资金将返还到你的余额账户。
+            </li>
+            <li>
+                严禁利用平台进行信用卡套现，一经发现非法行为，将交给有关部门处理！
+            </li>
+        </ul>
+
+        <div class="centered">
+            <a class="button primary" href="/league/overview?league_id={{leagueId}}&account_mobile={{accountMobile}}">
+                返回资金中心
+            </a>
+        </div>
+
+    </div>
+
+
+
+{{else}}
+
+    <div class="header">
+        提现
+    </div>
+
+    <div class="body">
+        <div class="remind message primary small">
+            <div>
+                为保证你的资金安全，请提现到本人储蓄卡。
+                如无特殊情况，自申请日起 3 - 5 个工作日内，指定银行卡将收到提款。
+            </div>
+            <div>
+                严禁利用平台进行信用卡进行套现，一经发现违法行为，将交给有关部门处理！
+            </div>
+        </div>
+
+        <div class="form">
+            <div class="group">
+                <label class="label">
+                    可提现金额：
+                </label>
+                <div class="controls">
+                    <div class="label">
+                        <span class="primary">
+                            ￥{{formatMoney(drawCashMoney)}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            {{#if cardList}}
+            <div class="group">
+                <label class="label">
+                    提现银行卡：
+                </label>
+                <div class="controls">
+                    {{#if cardList.length > 1}}
+                    <Select options="{{cardSelectOptions}}" />
+                    {{else}}
+                    <div class="label">
+                        <span class="bank-icon label info tiny radius">
+                            {{cardList[0].bank_name}}
+                        </span>
+                        **** **** **** {{cardList[0].card_num}}
+                    </div>
+                    {{/if}}
+                </div>
+            </div>
+            {{/if}}
+            <div class="group">
+                <label class="label">
+                    提现金额：
+                </label>
+                <div class="controls">
+                    <Input options="{{amountInputOptions}}" />
+                    <div class="inline">
+                        <div class="text info small">
+                            每笔收取1元手续费
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <button class="button primary" on-click="submit()"
+                {{#if submiting}} disabled{{/if}}
+                >
+                    提交申请
+                </button>
+            </div>
+        </div>
+    </div>
+{{/if}}
+
+</div>

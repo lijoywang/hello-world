@@ -1,0 +1,191 @@
+<div class="coupon-list">
+    <div class="tabs large primary">
+        <span class="tab{{#if type == COUPON_UNUSED}} active{{/if}}" on-click="set('type', COUPON_UNUSED)">
+            未使用优惠券
+        </span>
+        <span class="tab{{#if type == COUPON_USED}} active{{/if}}" on-click="set('type', COUPON_USED)">
+            已使用优惠券
+        </span>
+        <span class="tab{{#if type == COUPON_OUT_OF_DATE}} active{{/if}}" on-click="set('type', COUPON_OUT_OF_DATE)">
+            已过期优惠券
+        </span>
+    </div>
+    <div>
+        {{#if type == COUPON_UNUSED}}
+            {{#if unused.list.length > 0}}
+                {{#each unused.list}}
+                <div class="coupon">
+                    <div class="main unused">
+                        <div class="money">
+                            {{#if money > 0}}
+                                ￥{{money}}
+                            {{else}}
+                                {{discount}}折
+                            {{/if}}
+                        </div>
+
+                        <div class="condition large">
+                            {{condition}}
+                        </div>
+                        <div class="date-range">
+                            {{formatDate(effect_time)}}
+                            至
+                            {{formatDate(expire_time)}}
+                        </div>
+
+                    </div>
+                    <div class="vice">
+                        {{#if remark}}
+                        使用范围：{{remark}}
+                        {{/if}}
+                        {{#if url}}
+                        <div class="button outline primary large radius detail-info" on-click="toUseCoupon(url)">
+                            立即使用
+                        </div>
+                        {{/if}}
+                    </div>
+                </div>
+                {{/each}}
+                {{#if unused.hasMore}}
+                    {{#if unused.loading}}
+                    <div class="button fluid btn-load-more">
+                        加载中...
+                    </div>
+                    {{else}}
+                    <div class="button fluid btn-load-more" on-click="loadMore(COUPON_UNUSED)">
+                        点击加载更多
+                    </div>
+                    {{/if}}
+                {{/if}}
+            {{elseif unused.loading}}
+            <div class="loading">
+                加载中...
+            </div>
+            {{else}}
+            <div class="no-coupon">
+                <div class="no-coupon-img"></div>
+                <div class="no-coupon-info">
+                    没有优惠券
+                </div>
+            </div>
+            {{/if}}
+
+        {{elseif type == COUPON_USED}}
+            {{#if used.list.length > 0}}
+                {{#each used.list}}
+                <div class="coupon">
+                    <div class="main used">
+                        <div class="money">
+                            {{#if money > 0}}
+                                ￥{{money}}
+                            {{else}}
+                                {{discount}}折
+                            {{/if}}
+                        </div>
+
+                        <div class="condition large">
+                            {{condition}}
+                        </div>
+                        <div class="date-range">
+                            {{formatDate(effect_time)}}
+                            至
+                            {{formatDate(expire_time)}}
+                        </div>
+
+                    </div>
+                    <div class="vice">
+                        {{#if remark}}
+                        使用范围：{{remark}}
+                        {{/if}}
+                        <div class="detail-info">
+                            订单号：{{purchase_id}}
+                            <br>
+                            使用时间：{{use_time}}
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+                {{#if used.hasMore}}
+                    {{#if used.loading}}
+                    <div class="button fluid btn-load-more">
+                        加载中...
+                    </div>
+                    {{else}}
+                    <div class="button fluid btn-load-more" on-click="loadMore(COUPON_USED)">
+                        点击加载更多
+                    </div>
+                    {{/if}}
+                {{/if}}
+            {{elseif used.loading}}
+            <div class="loading">
+                加载中...
+            </div>
+            {{else}}
+            <div class="no-coupon">
+                <div class="no-coupon-img"></div>
+                <div class="no-coupon-info">
+                    没有优惠券
+                </div>
+            </div>
+            {{/if}}
+        {{elseif type == COUPON_OUT_OF_DATE}}
+            {{#if out.list.length > 0}}
+
+                {{#each out.list}}
+                <div class="coupon">
+                    <div class="main out-of-date">
+                        <div class="money">
+                            {{#if money > 0}}
+                                ￥{{money}}
+                            {{else}}
+                                {{discount}}折
+                            {{/if}}
+                        </div>
+
+                        <div class="condition large">
+                            {{condition}}
+                        </div>
+                        <div class="date-range">
+                            {{formatDate(effect_time)}}
+                            至
+                            {{formatDate(expire_time)}}
+                        </div>
+
+                    </div>
+                    <div class="vice">
+                        {{#if remark}}
+                        使用范围：{{remark}}
+                        {{/if}}
+                    </div>
+                </div>
+                {{/each}}
+                {{#if out.hasMore}}
+                    {{#if out.loading}}
+                    <div class="button fluid btn-load-more">
+                        加载中...
+                    </div>
+                    {{else}}
+                    <div class="button fluid btn-load-more" on-click="loadMore(COUPON_OUT_OF_DATE)">
+                        点击加载更多
+                    </div>
+                    {{/if}}
+                {{/if}}
+            {{elseif out.loading}}
+            <div class="loading">
+                加载中...
+            </div>
+            {{else}}
+            <div class="no-coupon">
+                <div class="no-coupon-img"></div>
+                <div class="no-coupon-info">
+                    没有优惠券
+                </div>
+            </div>
+            {{/if}}
+        {{/if}}
+    </div>
+
+    <style>
+        {{style}}
+    </style>
+</div>

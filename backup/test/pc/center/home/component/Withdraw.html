@@ -1,0 +1,101 @@
+
+<div class="withdraw-component">
+    <div class="notice info small">
+        <i class="icon-info-circle large"></i>
+        为了保证你的资金安全，请提现至本人储蓄卡。严禁利用平台进行信用卡套现，一经发现非法行为，将交至有关部门处理。工作日20:00前提现，平均当日到账，其余情形预计3-5个工作日到账，遇节假日有相应延迟。
+    </div>
+    <div class="form-container">
+        <div class="form">
+            <div class="group">
+                <label class="label">
+                    可提现金额：
+                </label>
+                <div class="controls">
+                    <div class="label">
+                        ￥{{formatMoney(options.totalMoney)}}
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <label class="label">
+                    提现银行卡：
+                </label>
+                <div class="controls">
+                    <div class="bank-card text small">
+                        <img src="{{options.bankLogo}}">
+                        <span>
+                            储蓄卡
+                        </span>
+                        尾号{{subString(options.cardNumber, -4)}}
+                    </div>
+                </div>
+            </div>
+            <div class="group withdraw-money">
+                <label class="label">
+                    提现金额：
+                </label>
+                <div class="controls">
+                    <Input options="{{withdrawMoneyInputOptions}}" />
+                    <div class="inline">
+                        <div class="text small">
+                            每笔收取1元手续费
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="error link small" on-click="downloadAPP()">
+                        {{#if options.userRole == options.USER_ROLE_STUDENT}}
+                            * 手机提现免手续费，点击这里下载跟谁学APP提现
+                        {{elseif options.userRole == options.USER_ROLE_TEACHET}}
+                            * 手机提现免手续费，点击这里下载老师版APP提现
+                        {{elseif options.userRole == options.USER_ROLE_INSTITUTION}}
+                            * 手机提现免手续费，点击这里下载机构版APP提现
+                        {{/if}}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="group password">
+                <label class="label">
+                    支付密码：
+                </label>
+                <div class="controls">
+                    <Input options="{{passwordInputOptions}}" />
+                    <div class="inline">
+                        <div class="primary link" on-click="getPassword()">
+                            找回支付密码
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="group action">
+                <label class="label"></label>
+                <div class="controls">
+                    <div class="button primary" on-click="submit()">
+                        提现
+                    </div>
+                    <div class="inline">
+                        <div class="text">
+                            {{#if options.userRole == options.USER_ROLE_INSTITUTION}}
+                                {{#if options.isTianxiao}}
+                                每日可提现1次
+                                {{else}}
+                                每周可提现2次
+                                {{/if}}
+                            {{else}}
+                            每周可提现1次
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        {{style}}
+    </style>
+</div>
+
+

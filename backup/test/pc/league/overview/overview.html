@@ -1,0 +1,88 @@
+<div class="overflow">
+    <div class="header">
+        资金明细
+    </div>
+    <div class="body">
+
+        {{#if showDrawCashAction}}
+        <div class="card-info bordered">
+            {{#if card}}
+                <div class="header">
+                    <strong>当前绑定银行卡</strong>
+                </div>
+                <div class="body">
+                    <label class="label info tiny">
+                        {{card.bank_name}}
+                    </label>
+                    **** **** **** {{card.card_num}}
+
+                    <div class="action">
+                        <span class="button small primary" on-click="unbindCard()">
+                            解绑
+                        </span>
+                    </div>
+
+                </div>
+            {{else}}
+                <div class="body">
+                    <a class="icon icon-plus" href="/league/bindCard?league_id={{leagueId}}&account_mobile={{accountMobile}}"></a>
+                    <a class="button fluid add-card" href="/league/bindCard?league_id={{leagueId}}&account_mobile={{accountMobile}}">
+                        添加银行卡
+                    </a>
+                </div>
+            {{/if}}
+        </div>
+        {{/if}}
+
+        <div class="money-info">
+            <table>
+                <tbody>
+                    <tr class="tr">
+                        <td rowspan="2" class="balance">
+                            <span class="fluid huge">
+                                余额
+                            </span>
+                            <strong class="fluid huge">
+                                ￥{{formatMoney(balance)}}
+                            </strong>
+                            {{#if showDrawCashAction}}
+                            <div class="button primary withdraw" on-click="withdraw()">
+                                提现
+                            </div>
+                            {{/if}}
+                        </td>
+                        <td>
+                            累计提现金额：
+                            <strong>
+                                ￥{{formatMoney(drawcash)}}
+                            </strong>
+                        </td>
+                        <td>
+                            本周收入：
+                            <strong>
+                                ￥{{formatMoney(incomeWeek)}}
+                            </strong>
+                        </td>
+                    </tr>
+                    <tr class="tr">
+                        <td>
+                            累计收入：
+                            <strong>
+                                ￥{{formatMoney(income)}}
+                            </strong>
+                        </td>
+                        <td>
+                            本月收入：
+                            <strong>
+                                ￥{{formatMoney(incomeMonth)}}
+                            </strong>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <RecordDetail />
+
+    </div>
+</div>

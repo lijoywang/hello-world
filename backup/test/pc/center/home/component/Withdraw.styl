@@ -1,0 +1,44 @@
+@import 'pc/common/variable.styl'
+
+.withdraw-component
+
+    .notice
+        padding-left 26px
+        text-indent -26px
+        i
+            position relative
+            top 2px
+            padding-right 10px
+    .bank-card
+        width 172px
+        padding $card-info-gap = 8px
+        border 1px solid #ccc
+        position relative
+        $logo-size = 24px
+        img
+            width $logo-size
+            position absolute
+            top 50%
+            margin-top -($logo-size / 2)
+        span
+            color #ccc
+            border-left 1px solid #ccc
+            margin-left $card-info-gap + $logo-size
+            margin-right $card-info-gap
+            padding 2px $card-info-gap
+
+    .form-container
+        text-align center
+    .form
+        display inline-block
+        margin 40px 0 100px
+
+        > .group
+            > .label
+                width 100px
+
+
+        .action .button
+            width 172px
+
+

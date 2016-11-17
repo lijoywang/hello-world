@@ -1,0 +1,101 @@
+<div class="promotion-refund card">
+
+    <div class="header">
+        <a href="/wallet/index">
+            <i class="icon icon-chevron-left"></i>
+            返回
+        </a>
+        <strong class="large">
+            推广余额退费
+        </strong>
+    </div>
+    <div class="body">
+        {{#if !result}}
+        <div class="form">
+
+            <div class="group">
+                <div class="label">
+                    推广余额：
+                </div>
+                <div class="controls">
+                    <div class="label">
+                        {{formatMoney(balance)}} 元
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="label">
+                    转出金额：
+                </div>
+                <div class="controls">
+                    <div class="input-group">
+                        <div class="label muted">
+                            ￥
+                        </div>
+                        <Input options="{{amountInputOptions}}" />
+                        <div class="label muted">
+                            元
+                        </div>
+                    </div>
+                    <div class="inline">
+                        <span class="muted">
+                            每笔退费将收取退费金额1%的手续费
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="label">
+                    支付密码：
+                </div>
+                <div class="controls">
+                    <Input options="{{payPasswordInputOptions}}" />
+                    <div class="inline">
+                        <a class="input-hint link muted" href="{{orgHost}}/main?tick={{orgNumber}}#/account/" target="_blank">
+                            {{#if hasPayPassword}}
+                            忘记支付密码？
+                            {{else}}
+                            去设置支付密码
+                            {{/if}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="button primary" on-click="submit()">
+                    确认退费至钱包余额
+                </div>
+                <span class="muted">
+                    仅支持退费至您的钱包余额
+                </span>
+            </div>
+
+        </div>
+        {{elseif result == 'success'}}
+        <div class="refund-success">
+            <i class="icon icon-check-circle success"></i>
+            <div class="desc">
+                <div class="large">
+                    退费成功
+                </div>
+                <small>
+                    成功退费 {{formatMoney(amountInputOptions.value)}} 元至钱包余额
+                </small>
+            </div>
+        </div>
+        {{elseif result == 'fail'}}
+        <div class="refund-fail">
+            <i class="icon icon-info-circle error"></i>
+            退费失败
+        </div>
+        {{/if}}
+
+        <div class="help">
+            <i class="icon mascot"></i>
+            支付有问题？请拨打客服热线 4000-910-910
+        </div>
+    </div>
+</div>

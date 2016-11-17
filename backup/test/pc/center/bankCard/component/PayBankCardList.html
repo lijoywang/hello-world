@@ -1,0 +1,14 @@
+<div class="pay-bank-card-list">
+    {{#each options.list:index}}
+    <BankCard options="{{.}}" index="{{index}}" />
+    {{/each}}
+
+    <div class="bind-card" on-click="add">
+        <i class="icon icon-plus"></i>
+        添加银行卡
+    </div>
+
+    <style>
+        {{style}}
+    </style>
+</div>

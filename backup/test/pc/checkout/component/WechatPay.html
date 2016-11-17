@@ -1,0 +1,30 @@
+<div class="wechart-pay dialog draggable">
+    <div class="header">
+        <div class="title">
+            <span class="primary money">
+                支付￥{{payMoney}}
+            </span>
+            微信支付
+
+        </div>
+    </div>
+    <div class="close">
+        ×
+    </div>
+    <div class="body code-and-pic">
+        <div>
+            <div class="qrcode"></div>
+            <div class="note small muted">
+                请使用微信扫一扫<br/>
+                扫描二维码支付
+            </div>
+        </div>
+        <div class="guide-pic">
+            <img src="{{imageDir}}/wechatScan.jpg"/>
+        </div>
+    </div>
+
+    <style>
+        {{style}}
+    </style>
+</div>

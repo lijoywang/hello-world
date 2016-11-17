@@ -1,0 +1,43 @@
+@import 'pc/common/variable.styl'
+
+.filter-bar
+    padding 6px $gap-medium
+    text-align left
+
+    .button
+        padding $gap-tiny $gap-huge
+    .teacher
+        width 100px
+        text-align center
+    .input
+        height 30px
+    .gap
+        margin-left $gap-medium
+
+    .teachers-wrap
+        display inline-block
+        position relative
+
+        .teachers
+            position absolute
+            display none
+            background-color #fff
+            width 350px
+            border 1px solid $brand-border
+            padding $gap-medium
+            z-index $zindex-small
+
+            .all
+                padding-bottom $gap-medium
+            .group
+                padding-bottom $gap-medium
+                border-bottom 1px solid $brand-border
+                > a + a
+                    margin-left $gap-medium
+
+        .link-teacher
+            display inline-block
+            margin-top $gap-small
+            margin-right $gap-small
+    .income
+        margin-left: $gap-huge

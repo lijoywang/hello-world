@@ -1,0 +1,28 @@
+<div class="account-type-selector">
+
+    <div class="radios large">
+        {{#each accountTypeList:index}}
+        <label class="radio">
+            <input type="radio" name="{{options.value}}" value="{{value}}">
+            {{text}}
+        </label>
+        {{/each}}
+    </div>
+
+    <div class="description info">
+        <i class="icon icon-info-circle"></i>
+        <ul class="unstyled">
+            <li>
+                企业账户指以企业或单位名称开立的银行结算账户，绑卡时无需验证；
+            </li>
+            <li>
+                个人账户指以个人名义开立的账户，绑卡时需进行手机号和身份验证。
+            </li>
+        </ul>
+    </div>
+
+    <style>
+        {{style}}
+    </style>
+
+</div>

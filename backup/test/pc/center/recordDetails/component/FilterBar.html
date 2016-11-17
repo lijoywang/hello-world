@@ -1,0 +1,62 @@
+<div class="filter-bar">
+    <span>
+        时间：
+    </span>
+    <DateRange options="{{dateRangeOptions}}" />
+
+
+    {{#if options.userRole == USER_ROLE_INSTITUTION}}
+    <span class="gap">
+        老师：
+    </span>
+    <div class="teachers-wrap">
+        <input class="teacher input" type="text" value="{{teacherName}}" readonly="readonly">
+        {{>filtByTeacher}}
+    </div>
+    {{/if}}
+
+
+    <span class="button primary gap" on-click="search()">
+        搜索
+    </span>
+
+
+    {{#if options.userRole == USER_ROLE_INSTITUTION}}
+    <span class="button primary gap" on-click="exportData()">
+        导出
+    </span>
+    <span class="large income">
+        收入：￥{{formatMoney(options.income)}}
+    </span>
+    {{/if}}
+
+
+
+    {{#partial filtByTeacher}}
+    <div class="teachers">
+        <div class="all">
+            <a class="link{{#if groupIndex == -1}} primary{{/if}}" on-click="selectTeacher()">全部</a>
+        </div>
+        <div class="group">
+            {{#each teacherGroup: index}}
+            <a class="link{{#if groupIndex == index}} primary{{/if}}" on-click="set('groupIndex', index)">
+                {{teacherGroup[index]}}
+            </a>
+            {{/each}}
+        </div>
+        <div class="links tiny">
+            {{#each teacherList}}
+            <a class="link link-teacher" on-click="selectTeacher(this)" data-title="{{user_name}}">
+                {{cutString(user_name, 10)}}
+            </a>
+            {{/each}}
+        </div>
+    </div>
+    {{/partial}}
+
+
+
+    <style>
+        {{style}}
+    </style>
+</div>

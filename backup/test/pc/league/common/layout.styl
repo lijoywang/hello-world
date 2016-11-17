@@ -1,0 +1,163 @@
+@import 'dep/icomoon/pc/0.0.1/style.styl'
+@import 'common/mixin.styl'
+@import 'pc/common/variable.styl'
+
+html,
+body,
+#app
+    height 100%
+
+.icon
+    display inline-block
+
+body
+
+    overflow hidden
+    background-color $brand-bg
+
+    &.dragging
+        user-select none
+
+    > .tooltip
+        border-color #444
+        background-color #666
+        color #fff
+
+        &:before
+            border-color #444
+
+        &:after
+            border-color #666
+
+.tip-message
+    background-color #f8f8f8
+    border 0
+    border-bottom 1px solid $brand-border
+    width 100%
+    text-align center
+    position fixed
+    left 0
+    top -35px
+    z-index $zindex-huge + 1
+    transition all 0.4s
+
+    > .close
+        float right
+        cursor pointer
+
+    &.active
+        top 0
+
+.pagination.tight
+    .ellipsis
+        margin 0 8px !important
+
+.centered
+    text-align center
+
+.hidden
+    display none
+
+#header
+
+    padding 15px
+    border-bottom 1px solid $brand-border
+
+    position absolute
+    left 0
+    top 0
+    width 100%
+
+    .logo
+        background url(pc/common/img/logo.png) no-repeat
+        background-image -webkit-image-set(url(pc/common/img/logo.png) 1x,url(pc/common/img/logo@2x.png) 2x)
+
+        display inline-block
+        width 120px
+        height 50px
+        vertical-align middle
+
+    h1
+        border-left 1px solid $brand-border
+        display inline-block
+        font-size 22px
+        margin 0 0 0 10px
+        padding-left 10px
+        vertical-align middle
+
+    .floated
+        float right
+        margin-top 14px
+
+    .links
+        display inline-block
+        margin-left 15px
+
+#main
+    position absolute
+    left 0
+    right 0
+    top 81px
+    bottom 0
+
+#sidebar
+    width 228px
+    padding 10px 0
+    overflow-y auto
+
+    .menu
+        padding 4px 40px
+        text-align center
+
+    .menu + .menu
+        border-top 1px dashed $brand-divider
+
+    .menu > .title
+        padding 6px 18px
+        color $brand-text-darker
+        font-weight bold
+
+        &.link:hover
+            color $brand-primary
+
+    .sub-menu > .link
+        padding 4px 18px
+
+        &:first-child
+            padding-top 0
+
+    .menu > .link,
+    .sub-menu > .link
+        position relative
+
+        &.checked
+            color $brand-primary
+
+    .menu.checked
+        background-color #fff
+        border-left 4px solid $brand-primary
+
+#container
+    background-color #fff
+    border-left 1px solid $brand-border
+    position absolute
+    top 0
+    bottom 0
+    left 228px
+    right 0
+    overflow-y auto
+
+    > div
+        padding 20px 40px
+        > .header
+            background-color $brand-bg
+            border-bottom 1px solid $brand-border
+            position absolute
+            top 0
+            left 0
+            right 0
+            padding 10px 40px
+            margin 0
+
+            + div
+                margin-top 43px

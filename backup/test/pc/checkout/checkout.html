@@ -1,0 +1,143 @@
+<div>
+
+    <div class="pay-info">
+        <div class="money">
+            支付金额：
+            <div>￥{{formatMoney(payMoney)}}</div>
+        </div>
+        <div class="text">
+            <div>订单提交成功！付款喽~</div>
+            <div>
+                订单号：{{purchaseId}}
+                {{#if showCountdown}}
+                <span>
+                    剩余支付时间：<span class="error">{{restTime}}</span>
+                </span>
+                <span>
+                    超时未支付，将自动释放报名名额
+                </span>
+                {{/if}}
+            </div>
+
+        </div>
+    </div>
+
+
+    <p class="select-note">
+        选择支付方式
+    </p>
+
+    {{#if bankInfoOptions.data.length > 0}}
+
+    <div class="card">
+        <div class="header">
+            <p>
+                快捷支付
+            </p>
+            无需网银，安全快捷
+        </div>
+        <div class="body">
+            <div class="bank-info">
+                <BankInfo options="{{bankInfoOptions}}" />
+            </div>
+            <div class="pay-money">
+                支付
+                <span class="money">
+                    ￥{{payMoney}}
+                </span>
+            </div>
+        </div>
+    </div>
+
+    {{#if selectedCard}}
+
+    <div class="form">
+    {{#if selectedCard.pay_flag == PAY_KUAIJIE}}
+        {{#if selectedCard.card_type == 'C'}}
+        <div class="group">
+            <div class="label">
+                卡验证码：
+            </div>
+            <div class="controls">
+                <Input options="{{cardCodeInputOptions}}" />
+
+            </div>
+        </div>
+
+        {{/if}}
+        <div class="group">
+            <div class="label">
+                短信验证码：
+            </div>
+            <div class="controls">
+                <Input options="{{codeInputOptions}}" />
+                <div class="inline" on-click="sendCode()">
+                    <CodeButton options="{{codeButtonOptions}}" />
+                </div>
+                <div class="block">
+                    <span class="small muted">
+                        已绑定手机
+                    </span>
+                    <span class="small info">
+                        {{formatMobile(selectedCard.owner_mobile)}}
+                    </span>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="group">
+            <div class="label">
+                平台支付密码：
+            </div>
+            <div class="controls">
+                <Input options="{{passwordInputOptions}}" />
+                <div class="inline">
+                    <a class="small" href="">
+                        忘记密码
+                    </a>
+                </div>
+                <div class="block">
+                    <span class="small muted">
+                        <p>该卡已开通一键支付，请输入平台支付密码确认支付</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+
+        <div class="footer">
+            <button class="button primary" on-click="submit()">
+                立即支付
+            </button>
+        </div>
+    </div>
+    {{/if}}
+
+
+    {{/if}}
+
+    <div class="other-pay">
+        {{#if bankInfoOptions.data.length > 0}}
+        <div class="other-pay-text">
+            其它支付方式
+        </div>
+        {{/if}}
+        <div>
+            {{#if hasZhifubao}}
+            <a on-click="zhifubaoPay()">
+                <div class="zhifubao"></div>
+            </a>
+            {{/if}}
+            {{#if hasWeixin}}
+            <a on-click="weixinPay()">
+                <div class="weixin"></div>
+            </a>
+            {{/if}}
+            {{#if hasWangyin}}
+            <a on-click="getBankList()">
+                <div class="wangyin"></div>
+            </a>
+            {{/if}}
+        </div>
+    </div>
+</div>

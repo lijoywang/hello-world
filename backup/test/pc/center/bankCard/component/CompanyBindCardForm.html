@@ -1,0 +1,32 @@
+<div class="company-bind-card-form">
+
+    <div class="form">
+        <div class="group">
+            <div class="label">
+                企业开户名称：
+            </div>
+            <div class="controls">
+                <Input options="{{companyNameInputOptions}}" />
+            </div>
+        </div>
+        <div class="group">
+            <div class="label">
+                银行卡号：
+            </div>
+            <div class="controls">
+                <Input options="{{bankCardInputOptions}}" />
+            </div>
+        </div>
+        <div class="group">
+            <div class="label">
+                开户行地区：
+            </div>
+            <div class="controls">
+                <AddressSelect options="{{bankLocationOptions}}" />
+            </div>
+        </div>
+    </div>
+    <style>
+        {{style}}
+    </style>
+</div>

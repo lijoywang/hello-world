@@ -1,0 +1,53 @@
+
+<div id="nav">
+    <div class="wrapper">
+        <div class="floated">
+            <span class="small">
+                您好，
+                <a href="{{url.centerUrl}}">
+                    {{userName}}
+                </a>
+            </span>
+            <a class="link small link-quit" on-click="quit()">
+                安全退出
+            </a>
+        </div>
+        <a class="link small" href="{{url.homeUrl}}" target="_blank">
+            <i class="icon-home"></i>
+            跟谁学首页
+        </a>
+    </div>
+</div>
+
+<div id="header">
+    <div class="wrapper">
+        <div class="floated">
+            <div class="buttons large">
+                <a class="button
+                {{#if tab == TAB_INDEX}} active{{/if}}
+                " href="#tab={{TAB_INDEX}}">
+                    首页
+                </a>
+                <a class="button
+                {{#if tab == TAB_ACCOUNT}} active{{/if}}
+                " href="#tab={{TAB_ACCOUNT}}">
+                    帐号管理
+                </a>
+                <a class="button
+                {{#if tab == TAB_FUND}} active{{/if}}
+                " href="#tab={{TAB_FUND}}">
+                    资金管理
+                </a>
+                <a class="button" href="{{url.helpUrl}}" target="_blank">
+                    帮助中心
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="main">
+
+</div>
+
+<Footer />

@@ -1,0 +1,142 @@
+<div class="balance-component">
+    <div class="balance">
+
+
+
+        <div class="floated">
+            {{#if options.pay_card_count || options.withdraw_card_count}}
+            <div class="large card-info">
+                已绑定银行卡
+            </div>
+            <div class="card-count">
+                {{#if !options.isInstitution}}
+                <span class="payment-card">
+                    支付卡{{options.pay_card_count}}张
+                </span>
+                {{/if}}
+                <span>
+                    提现卡{{options.withdraw_card_count}}张
+                </span>
+
+            </div>
+            {{else}}
+            <div class="no-card-info">
+                您还没有银行卡，快去添加一张吧
+            </div>
+            {{/if}}
+
+            <div class="large button outline primary display-card" on-click="showCard()">
+                查看我的银行卡
+            </div>
+        </div>
+        <div class="balance-title">
+            我的余额
+        </div>
+        <div class="charge-and-withdraw" >
+            <span class="money large bold">
+                {{formatMoney(options.balance)}}元
+            </span>
+            {{#if !options.isInstitution}}
+                <span class="button primary btn-charge" on-click="charge()">
+                    充值
+                </span>
+            {{/if}}
+
+            <span class="button btn-withdraw" on-click="withdraw()">
+                提现
+            </span>
+
+            {{#if options.isInstitution}}
+                <a class="button primary" href="http://www.genshuixue.com/static/app">
+                    下载 App
+                </a>
+            {{/if}}
+        </div>
+        <div class="income muted small">
+            {{#if options.isStudent}}
+            <div class="link" on-click="showCoupon()">
+                优惠券<span class="primary">{{options.couponCount}}</span>张
+            </div>
+            {{else}}
+            <div>
+                预期收入：￥{{formatMoney(options.expected_earning)}}
+                <br>
+                累计收入：￥{{formatMoney(options.income)}}
+            </div>
+            <div>
+                本周收入：￥{{formatMoney(options.week_income)}}
+                <br>
+                本月收入：￥{{formatMoney(options.month_income)}}
+            </div>
+            {{/if}}
+        </div>
+    </div>
+
+
+    <div class="record">
+        <div class="title">
+            <div class="floated error link" on-click="showBalanceRecord()">
+                余额收支明细
+            </div>
+            交易记录
+        </div>
+        {{#if !options.list}}
+        <div class="no-record muted">
+            加载中...
+        </div>
+        {{elseif options.list.length == 0}}
+        <div class="no-record muted">
+            还没有交易记录哦~
+        </div>
+        {{else}}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>时间</th>
+                    <th>备注</th>
+                    <th>类型</th>
+                    <th>金额</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each options.list}}
+                <tr>
+                    <td>
+                        {{formatDate(create_time, 'YYYY-MM-DD')}}
+                    </td>
+                    <td class="trade-record-note">
+                        {{#if url}}
+                            <a class="info" href="{{url}}" target="_blank">
+                                {{op_info}}
+                            </a>
+                        {{else}}
+                            {{op_info}}
+                        {{/if}}
+                    </td>
+                    <td>
+                        {{op_type_name}}
+                    </td>
+                    <td class="op-money">
+                        {{settlement}}
+                        {{formatMoney(op_money)}}
+                    </td>
+                </tr>
+                {{/each}}
+
+            </tbody>
+
+        </table>
+
+        <div class="load-more small link" on-click="loadMore()">
+            查看更多交易记录
+        </div>
+        {{/if}}
+
+    </div>
+
+
+    <style>
+        {{style}}
+    </style>
+
+</div>

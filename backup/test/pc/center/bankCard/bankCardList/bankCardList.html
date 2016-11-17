@@ -1,0 +1,21 @@
+<div class="bank-card-list">
+
+    {{#if options.supportWithdrawBankCard}}
+    <div class="title">
+        提现卡
+    </div>
+    <WithdrawBankCardList options="{{withdrawBankCardListOptions}}" />
+    {{/if}}
+
+    {{#if options.supportPayBankCard}}
+    <div class="title">
+        支付卡
+    </div>
+    <PayBankCardList options="{{payBankCardListOptions}}" />
+    {{/if}}
+
+    <style>
+        {{style}}
+    </style>
+
+</div>

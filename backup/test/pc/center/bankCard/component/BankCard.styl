@@ -1,0 +1,43 @@
+@import 'pc/common/variable.styl'
+@import 'common/mixin.styl'
+
+.bank-card
+
+    $gap-horizontal = 2 * $gap-large
+
+    background-color #FFF
+    border 1px solid $brand-border
+    border-radius 14px
+    display inline-block
+    width 325px
+    box-shadow 1px 1px 3px rgba(0,0,0,0.1)
+
+    .floated
+        float right
+    .header
+        line-height 0
+        margin $gap-medium $gap-horizontal
+    .unstyled
+        margin $gap-medium $gap-horizontal
+        height 75px
+
+    .footer
+        border-top 1px solid $brand-divider
+        padding $gap-small $gap-horizontal
+        clearfix()
+
+    .bank-logo
+        height 49px
+
+    .bank-name
+        margin-left $gap-large
+
+    .bank-logo,
+    .bank-name
+        vertical-align middle
+
+    .bank-card-number
+        margin-bottom $gap-small
+
+    .bank-card-type
+        padding-left 0

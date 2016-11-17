@@ -1,0 +1,82 @@
+<div class="money-detail">
+
+    {{#if size >= 0}}
+        <h3>
+            共
+            <span class="error">
+                {{size}}
+            </span>
+            条结果
+        </h3>
+    {{/if}}
+
+    <div class="form inline">
+        <div class="group">
+            <label class="label">
+                时间：
+            </label>
+            <div class="controls">
+                <DateRange options="{{dateRangeOptions}}" />
+            </div>
+        </div>
+        <div class="group">
+            <div class="controls">
+                <div class="button primary" on-click="search()">
+                    搜索
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <table class="table row-bordered">
+        <thead>
+            <tr>
+                <th>时间</th>
+                <th>备注</th>
+                <th>类型</th>
+                <th>金额</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each records}}
+            <tr>
+                <td>
+                    {{create_time}}
+                </td>
+                <td>
+                    {{op_info}}
+                </td>
+                <td>
+                    {{op_type_name}}
+                </td>
+                <td>
+                    {{#if op_money < 0}}
+
+                    <span class="error">
+                    {{op_money}}
+                    </span>
+
+                    {{else}}
+
+                    <span class="success">
+                    {{op_money}}
+                    </span>
+
+                    {{/if}}
+                </td>
+            </tr>
+            {{else}}
+            <tr>
+                <td colspan="4">
+                    <div class="no-data">
+                        没有记录
+                    </div>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <Pager options="{{pagerOptions}}" />
+
+</div>

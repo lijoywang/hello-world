@@ -1,0 +1,64 @@
+<div class="bank-card">
+
+    <div class="header">
+        <img class="bank-logo" src="{{options.bankLogo}}">
+        <strong class="large bank-name">
+            {{options.bankName}}
+        </strong>
+    </div>
+
+    <ul class="unstyled">
+        <li class="large bank-card-number">
+            {{
+                formatCardNumber(
+                    formatMask(options.bankCardNumber, 8, 12)
+                )
+            }}
+        </li>
+        {{#if options.userName}}
+        <li>
+            持卡人：
+            {{
+                formatMask(
+                    options.userName,
+                    0,
+                    options.userName.length - 1
+                )
+            }}
+        </li>
+        {{/if}}
+        {{#if options.userMobile}}
+        <li>
+             手机号：
+             {{formatMobile(options.userMobile)}}
+        </li>
+        {{/if}}
+    </ul>
+
+    <div class="footer">
+        <div class="buttons small tight floated">
+            {{#if options.canReplace}}
+            <div class="button" on-click="replace()">
+                更换
+            </div>
+            {{/if}}
+            {{#if options.canRemove}}
+            <div class="button" on-click="remove()">
+                删除
+            </div>
+            {{/if}}
+        </div>
+        <div class="label small bank-card-type">
+            {{#if options.bankCardType == BANK_CARD_TYPE_CREDIT}}
+                信用卡
+            {{elseif options.bankCardType == BANK_CARD_TYPE_DEPOSITS}}
+                储蓄卡
+            {{/if}}
+        </div>
+    </div>
+
+    <style>
+        {{style}}
+    </style>
+
+</div>

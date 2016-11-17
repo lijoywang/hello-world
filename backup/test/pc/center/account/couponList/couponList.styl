@@ -1,0 +1,69 @@
+@import 'pc/common/variable.styl'
+
+.coupon-list
+    padding $gap-medium $gap-huge $gap-huge
+    .no-coupon-img
+        padding-top 220px
+        background url('/src/pc/center/img/no-coupon.png') no-repeat 50%
+        background-position bottom
+        background-size 200px 100px
+    .no-coupon-info
+        text-align center
+        padding 20px 0 100px
+    .coupon
+        margin-top $gap-huge
+        background-color #f2f2f2
+        position relative
+
+
+        .main
+            display inline-block
+            width 38%
+            padding $gap-medium $gap-huge $gap-huge
+            color #fff
+            .money
+                font-size 40px
+            .condition
+                height 26px
+
+        .unused
+            background url('/src/pc/center/img/coupon-unused.png') #fff
+            background-size contain
+        .used
+            background url('/src/pc/center/img/coupon-used.png') #fff
+            background-size contain
+        .out-of-date
+            background url('/src/pc/center/img/coupon-out-of-date.png') #fff
+            background-size contain
+
+        .vice
+            background-color #f2f2f2
+            display inline-block
+            width 62%
+            vertical-align top
+            padding $gap-medium
+            position absolute
+            top 0
+            bottom 0
+
+            .coupon-button
+                display inline-block
+                padding $gap-medium 40px
+                color $brand-primary
+                background-color #fff
+                border 1px solid $brand-primary
+                border-radius 3px
+
+            .detail-info
+                position absolute
+                bottom $gap-large
+                left $gap-medium
+    .btn-load-more
+        text-align center
+        margin-top $gap-huge
+
+    .loading
+        text-align center
+        padding 170px 0
+
+

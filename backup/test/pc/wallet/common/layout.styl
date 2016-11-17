@@ -1,0 +1,35 @@
+@import 'pc/common/layout.styl'
+
+#app
+    padding-top 0
+
+#main,
+.dialog
+    .tabs
+        border-bottom 1px solid $brand-border
+
+        .tab
+            background-color #f8f8f8
+            border 1px solid $brand-border
+            padding-left 25px
+            padding-right 25px
+
+            position relative
+            bottom -1px
+
+            &.checked
+                background-color #FFF
+                border-bottom-color #FFF
+
+.card
+    > .header
+        background-color #fbfbfb
+        border-bottom 1px solid #ddd
+        padding 15px 20px
+
+        .icon-chevron-left
+            margin-right 5px
+
+.pagination
+    text-align center
+    margin-top 10px

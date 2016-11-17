@@ -1,0 +1,31 @@
+<div class="wait-pay-result dialog draggable">
+    <div class="header">
+        <div class="title">
+            温馨提示
+        </div>
+    </div>
+    <div class="close">
+        ×
+    </div>
+    <div class="body">
+        请在新打开的页面进行支付，支付完成前请不要关闭该窗口
+
+        <div class="buttons">
+            <div class="button primary" on-click="paySuccess()">
+                已完成支付
+            </div>
+            <div class="button secondary" on-click="payFailure()">
+                支付遇到问题
+            </div>
+        </div>
+
+        <div class="small muted note">
+            支付有问题？请拨打客服热线 4000-910-910
+        </div>
+
+    </div>
+
+    <style>
+        {{style}}
+    </style>
+</div>

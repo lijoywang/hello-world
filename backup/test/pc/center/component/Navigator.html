@@ -1,0 +1,12 @@
+<div class="navigator">
+    {{#each options.list:index}}
+    <div class="button fluid {{#if options.selectedIndex == index}}selected{{/if}}" on-click="select(index)">
+        {{label}}
+        <i class="icon-chevron-right"></i>
+    </div>
+    {{/each}}
+
+    <style>
+        {{style}}
+    </style>
+</div>

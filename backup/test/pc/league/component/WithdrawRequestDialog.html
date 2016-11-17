@@ -1,0 +1,25 @@
+<div class="dialog withdraw-request-dialog">
+    <div class="header">
+        <div class="title">
+            提现
+        </div>
+    </div>
+    <div class="close">
+        ×
+    </div>
+    <div class="body">
+        请输入验证码，已发送至 {{formatMobile(mobile)}}
+        <div class="code-form">
+            <Input options="{{inputOptions}}" />
+            <CodeButton options="{{codeButtonOptions}}" on-click="sendCode" />
+        </div>
+    </div>
+    <div class="footer">
+        <div class="button primary" on-click="withdrawRequest()">
+            申请提现
+        </div>
+    </div>
+    <style>
+        {{style}}
+    </style>
+</div>

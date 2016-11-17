@@ -1,0 +1,37 @@
+<table class="table row-bordered">
+    <thead>
+        <tr>
+            <th style="width: 15%">时间</th>
+            <th style="width: 54%">备注</th>
+            <th>类型</th>
+            <th style="width: 16%" class="trade-record-money">金额</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each options.list}}
+        <tr>
+            <td>
+                {{formatDate(create_time)}}
+            </td>
+            <td class="trade-record-note">
+                {{#if url}}
+                    <a class="info" href="{{url}}" target="_blank">
+                        {{op_info}}
+                    </a>
+                {{else}}
+                    {{op_info}}
+                {{/if}}
+            </td>
+            <td>
+                {{op_type_name}}
+            </td>
+            <td class="trade-record-money">
+                {{settlement}}
+                {{formatMoney(op_money)}}
+            </td>
+        </tr>
+        {{/each}}
+
+    </tbody>
+
+</table>

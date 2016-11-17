@@ -1,0 +1,188 @@
+<div class="promotion-recharge card">
+
+    <div class="header">
+        <a href="/wallet/index">
+            <i class="icon icon-chevron-left"></i>
+            返回
+        </a>
+
+        <strong class="large">
+        {{#if result == 'success'}}
+            推广账户
+        {{elseif result == 'fail'}}
+            跟谁学联盟结算中心
+        {{else}}
+            推广充值
+        {{/if}}
+        </strong>
+    </div>
+
+    <div class="body">
+
+        {{#if !result}}
+        <div class="tabs tight primary">
+            <div class="tab
+            {{#if tabIndex == 0}} checked{{/if}}
+            " on-click="set('tabIndex', 0)">
+                企业网银充值
+            </div>
+            <div class="tab
+            {{#if tabIndex == 1}} checked{{/if}}
+            " on-click="set('tabIndex', 1)">
+                个人网银充值
+            </div>
+            <div class="tab
+            {{#if tabIndex == 2}} checked{{/if}}
+            " on-click="set('tabIndex', 2)">
+                钱包余额充值
+            </div>
+        </div>
+
+        <div class="panel">
+
+            {{#if tabIndex == 0 || tabIndex == 1}}
+            <div class="field">
+                推广金额：￥{{formatMoney(promotionAmount)}}
+            </div>
+            <div class="field">
+
+                充值金额：
+
+                <div class="input-group">
+                    <div class="label muted">
+                        ￥
+                    </div>
+                    <Input options="{{rechargeInputOptions}}" />
+                    <div class="label muted">
+                        元
+                    </div>
+                </div>
+
+                <small class="input-hint muted">
+                    单次最少充值￥1000，使用钱包余额充值没有最低限额
+                </small>
+
+            </div>
+
+            <div class="field">
+                支付方式：
+
+                <div class="bank-hint">
+                    <i class="icon icon-info-circle"></i>
+                    选择银行卡后请在新窗口的银行页面使用
+                    <span class="error">
+                        网银或银行U盾
+                    </span>
+                    支付，其他方式会有额度限制。
+                    <span class="info">
+                        建议使用IE浏览器
+                    </span>
+                </div>
+
+                <div class="bank-list">
+                    {{#each bankList}}
+                    <label class="radio bank
+                    {{#if bankCode == code}} checked{{/if}}
+                    ">
+
+                        {{#if tabIndex == 0}}
+                        <span class="floated">
+                            企业
+                        </span>
+                        {{/if}}
+
+                        <input type="radio" name="{{bankCode}}" value="{{code}}" />
+                        <img src="{{compressImage(icon_url, 24, 24)}}" />
+                        {{name}}
+                    </label>
+                    {{/each}}
+                </div>
+            </div>
+
+            <div class="button primary next-step" on-click="submit()">
+                下一步
+            </div>
+
+            {{elseif tabIndex == 2}}
+
+            <div class="field">
+                推广金额：￥{{formatMoney(promotionAmount)}}
+            </div>
+            <div class="field">
+                钱包余额：￥{{formatMoney(walletBalance)}}
+            </div>
+            <div class="field">
+                充值金额：
+                <div class="input-group">
+                    <div class="label muted">
+                        ￥
+                    </div>
+                    <Input options="{{rechargeInputOptions}}" />
+                    <div class="label muted">
+                        元
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                支付密码：
+                <Input options="{{payPasswordInputOptions}}" />
+                <a class="input-hint link muted" href="{{orgHost}}/main?tick={{orgNumber}}#/account/" target="_blank">
+                    {{#if hasPayPassword}}
+                    忘记支付密码？
+                    {{else}}
+                    去设置支付密码
+                    {{/if}}
+                </a>
+            </div>
+            <div class="button primary" on-click="submit()">
+                确认充值
+            </div>
+
+            {{/if}}
+
+        </div>
+
+        {{elseif result == 'fail'}}
+
+        <div class="recharge-fail">
+            <i class="icon icon-info-circle error"></i>
+            充值失败
+        </div>
+
+        <div class="button primary next-step" on-click="set('result', '')">
+            继续充值
+        </div>
+
+        {{elseif result == 'success'}}
+
+        <div class="recharge-success">
+            <i class="icon icon-check-circle success"></i>
+            <div class="desc">
+                <div class="large">
+                    充值成功
+                </div>
+                <small>
+                    成功充值 {{formatMoney(rechargeInputOptions.value)}} 元至推广余额
+                </small>
+            </div>
+        </div>
+
+        <div class="buttons next-step">
+            <a class="button primary" href="/wallet/index">
+                返回推广中心
+            </a>
+            <a class="button primary outline" href="{{orgHost}}/main?tick={{orgNumber}}#/" target="_blank">
+                我的机构
+            </a>
+        </div>
+
+        {{/if}}
+
+        <div class="help">
+            <i class="icon mascot"></i>
+            支付有问题？请拨打客服热线 4000-910-910
+        </div>
+
+    </div>
+
+</div>

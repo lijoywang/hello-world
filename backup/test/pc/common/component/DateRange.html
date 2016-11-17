@@ -1,0 +1,38 @@
+<div class="date-range">
+    <Input options="{{options}}" />
+    <div class="menu bordered">
+        <div class="calendar calendar-start">
+            <div class="header">
+                <i class="icon icon-chevron-left" on-click="prevStart()"></i>
+                <DateSelect options="{{startDateSelectOptions}}" />
+                <i class="icon icon-chevron-right" on-click="nextStart()"></i>
+            </div>
+            <div class="body">
+
+            </div>
+        </div>
+        <div class="calendar calendar-end">
+            <div class="header">
+                <i class="icon icon-chevron-left" on-click="prevEnd()"></i>
+                <DateSelect options="{{endDateSelectOptions}}" />
+                <i class="icon icon-chevron-right" on-click="nextEnd()"></i>
+            </div>
+            <div class="body">
+
+            </div>
+        </div>
+        <div class="footer">
+            <div class="buttons small">
+                <div class="button primary">
+                    确定
+                </div>
+                <div class="button link">
+                    取消
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        {{style}}
+    </style>
+</div>

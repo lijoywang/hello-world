@@ -1,0 +1,129 @@
+
+<div class="bind-card">
+    <div class="header">
+        绑定银行卡
+    </div>
+
+    <div class="body form">
+
+        <div class="group">
+            <label class="label">
+                用户性质：
+            </label>
+            <div class="controls">
+                <BoxGroup options="{{typeBoxGroupOptions}}" />
+            </div>
+        </div>
+
+        {{#if typeBoxGroupOptions.value == 1}}
+
+        <div class="group">
+            <label class="label">
+                持卡人姓名：
+            </label>
+            <div class="controls">
+                <Input options="{{nameInputOptions}}" />
+            </div>
+        </div>
+        <div class="group">
+            <label class="label">
+                身份证号：
+            </label>
+            <div class="controls">
+                <Input options="{{idInputOptions}}" />
+            </div>
+        </div>
+        <div class="group">
+            <label class="label">
+                开户银行：
+            </label>
+            <div class="controls">
+                <Select options="{{bankSelectOptions}}" />
+            </div>
+        </div>
+        <div class="group">
+            <label class="label">
+                银行卡号：
+            </label>
+            <div class="controls">
+                <Input options="{{cardNumInputOptions}}" />
+            </div>
+        </div>
+        <div class="group">
+            <label class="label">
+                开户行地区：
+            </label>
+            <div class="controls">
+                <AddressSelect options="{{regionOptions}}" />
+            </div>
+        </div>
+        <div class="group">
+            <label class="label">
+                银行预留手机号：
+            </label>
+            <div class="controls">
+                <Input options="{{mobileInputOptions}}" />
+            </div>
+        </div>
+        <div class="group">
+            <label class="label">
+                手机验证码：
+            </label>
+            <div class="controls">
+                <Input options="{{codeInputOptions}}" />
+                <div class="inline">
+                    <CodeButton options="{{codeButtonOptions}}" on-click="sendSMS" />
+                </div>
+            </div>
+        </div>
+
+        {{else}}
+
+        <div class="group">
+            <label class="label">
+                企业开户名称：
+            </label>
+            <div class="controls">
+                <Input options="{{companyInputOptions}}" />
+                <div class="inline">
+                    <div class="info small">
+                        企业全名
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="group">
+            <label class="label">
+                开户银行：
+            </label>
+            <div class="controls">
+                <Select options="{{bankSelectOptions}}" />
+            </div>
+        </div>
+        <div class="group">
+            <label class="label">
+                银行卡号：
+            </label>
+            <div class="controls">
+                <Input options="{{cardNumInputOptions}}" />
+            </div>
+        </div>
+        <div class="group">
+            <label class="label">
+                开户行地区：
+            </label>
+            <div class="controls">
+                <AddressSelect options="{{regionOptions}}" />
+            </div>
+        </div>
+
+        {{/if}}
+        <div class="footer">
+            <button class="button primary" on-click="bindCard()"
+            {{#if submiting}} disabled{{/if}}
+            >
+                提交
+            </button>
+        </div>
+    </div>
+</div>

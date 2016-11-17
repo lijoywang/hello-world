@@ -1,0 +1,42 @@
+<div class="account">
+    <div class="navigator-container">
+        <Navigator options="{{navigatorOptions}}" />
+    </div>
+
+    <div class="floated">
+        {{#if options.tab == SUBTAB_BANK_CARD}}
+
+            {{#if bindBankCardOptions.bindType != null}}
+                <div class="card">
+                    <div class="header">
+                        <i class="icon icon-chevron-left" on-click="set('bindBankCardOptions.bindType', null)"></i>
+                        {{#if bindBankCardOptions.bindType == BIND_TYPE_NEW_PAY}}
+                            绑定支付卡
+                        {{elseif bindBankCardOptions.bindType == BIND_TYPE_NEW_WITHDRAW}}
+                            绑定提现卡
+                        {{elseif bindBankCardOptions.bindType == BIND_TYPE_EDIT_WITHDRAW}}
+                            更换提现卡
+                        {{/if}}
+                    </div>
+                    <div class="body centered">
+                        <BindBankCard options="{{bindBankCardOptions}}" />
+                    </div>
+                </div>
+            {{else}}
+                <div class="card">
+                    <BankCardList options="{{bankCardListOptions}}" />
+                </div>
+            {{/if}}
+
+        {{elseif options.tab == SUBTAB_COUPON}}
+            <div class="card">
+                <CouponList />
+            </div>
+        {{/if}}
+    </div>
+
+    <style>
+        {{style}}
+    </style>
+
+</div>

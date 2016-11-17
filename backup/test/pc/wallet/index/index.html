@@ -1,0 +1,129 @@
+<div class="promotion-index">
+
+    <div class="overview card">
+        <ul class="floated unstyled">
+            <li>
+                累计消费：
+                <span class="money">
+                    {{formatMoney(totalConsume)}}
+                </span>
+                元
+            </li>
+            <li>
+                累计充值：
+                <span class="money">
+                    {{formatMoney(totalRecharge)}}
+                </span>
+                元
+            </li>
+        </ul>
+
+        <div class="balance">
+            <div class="header">
+                <a class="floated" href="http://www.genshuixue.com/guide/org_layout?a=org&op=money&ex=extend" target="_blank">
+                    <i class="icon icon-question-circle error large"></i>
+                </a>
+                <strong class="large">
+                    推广余额
+                </strong>
+            </div>
+
+
+            <div class="body">
+                <strong class="money primary">
+                    {{formatMoney(balance)}}
+                </strong>
+                元
+            </div>
+
+            <div class="footer">
+                <div class="floated">
+                    <a class="button link" href="/wallet/refund">
+                        退费
+                    </a>
+                </div>
+                <a class="button primary radius" href="/wallet/recharge">
+                    充值
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="detail">
+        <div class="tabs tight primary">
+            <div class="tab
+            {{#if tabIndex == 0}} checked{{/if}}
+            " on-click="set('tabIndex', 0)">
+                推广资金明细
+            </div>
+            <div class="tab
+            {{#if tabIndex == 1}} checked{{/if}}
+            " on-click="set('tabIndex', 1)">
+                推广扣费明细
+            </div>
+            <div class="tab
+            {{#if tabIndex == 2}} checked{{/if}}
+            " on-click="set('tabIndex', 2)">
+                充值明细
+            </div>
+            <div class="tab
+            {{#if tabIndex == 3}} checked{{/if}}
+            " on-click="set('tabIndex', 3)">
+                退费明细
+            </div>
+        </div>
+        <div class="panel card">
+            <table class="table row-bordered">
+                <thead>
+                    <tr>
+                        <th class="date">时间</th>
+                        <th style="width:200px">备注</th>
+                        <th style="width:200px">类型</th>
+                        <th style="width:100px">金额</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each list}}
+                    <tr>
+                        <td class="date">
+                            {{create_time}}
+                        </td>
+                        <td>
+                            {{#if op_info}}
+                                {{op_info}}
+                            {{/if}}
+                        </td>
+                        <td>
+                            {{getOptypeText(op_type)}}
+                        </td>
+                        <td>
+                            {{#if op_desc == '+'}}
+                            <span class="error">
+                                + {{op_money}}
+                            </span>
+                            {{elseif op_desc == '-'}}
+                            <span class="success">
+                                - {{op_money}}
+                            </span>
+                            {{else}}
+                                {{op_money}}
+                            {{/if}}
+                        </td>
+                    </tr>
+                    {{else}}
+                    <tr>
+                        <td colspan="4">
+                            <div class="no-data">
+                                暂无数据
+                            </div>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            <Pager options="{{pagerOptions}}" />
+        </div>
+    </div>
+
+</div>

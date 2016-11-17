@@ -1,0 +1,82 @@
+@import 'pc/common/variable.styl'
+.balance-component
+    > div
+        border 1px solid $brand-border
+
+    > .balance
+        background-color #fff
+        padding $gap-huge
+        margin-bottom $gap-huge
+
+        > .floated
+            text-align right
+
+        .balance-title
+        .charge-and-withdraw
+        .card-info
+        .card-count
+        .no-card-info
+            margin-bottom $gap-medium
+        .no-card-info
+            margin-top 30px
+        .payment-card
+            margin-right $gap-small
+        .charge-and-withdraw
+
+            span
+                margin-right $gap-huge
+            .money
+                font-weight bold
+            .btn-charge
+                width 120px
+            .btn-withdraw
+                color $brand-info
+
+        .income
+            > div
+                display inline-block
+                margin-right $gap-huge
+        .display-card
+            background-color #fff
+            padding 8px 30px
+        .button
+            border-radius 2px
+
+        .recharge-tip
+            margin-left 10px
+
+    > .record
+        background-color #fafafa
+        .title
+            padding $gap-medium 0
+            margin 0 $gap-huge
+            border-bottom 1px solid #eee
+        thead
+            border-bottom 1px solid #eee
+            background-color #fafafa
+            th:nth-child(4)
+                text-align right
+                padding-right 30px
+        tbody
+            tr:nth-child(2n)
+                background #fafafa
+            td:nth-child(1)
+                width 13%
+            td:nth-child(2)
+                width 55%
+            td:nth-child(4)
+                width 16%
+                padding-right 30px
+                text-align right
+
+        .load-more
+            padding $gap-medium
+            color $brand-muted
+            text-align center
+            background-color #fff
+        .trade-record-note
+            text-align left
+
+        .no-record
+            text-align center
+            padding 140px 0 160px

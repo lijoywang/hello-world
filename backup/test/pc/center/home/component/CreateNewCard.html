@@ -1,0 +1,79 @@
+{{#if chargeSuccess}}
+    <ChargeSuccess options="{{ChargeSuccessOptions}}" />
+{{else}}
+    <div class="create-new-card">
+        <div class="form action">
+            <div class="group">
+                <div class="label">银行卡号：</div>
+                <div class="controls">
+                    <Input options="{{cardInputOptions}}" />
+                </div>
+            </div>
+            <div class="group">
+                <div class="label">
+                    所属银行：
+                </div>
+                <div class="controls">
+                    <Select options="{{bankSelectOptions}}" />
+                </div>
+            </div>
+            <div class="group">
+                <div class="label">姓名：</div>
+                <div class="controls">
+                    <Input options="{{nameInputOptions}}" />
+                </div>
+            </div>
+            <div class="group">
+                <div class="label">身份证：</div>
+                <div class="controls">
+                    <Input options="{{identityInputOptions}}" />
+                </div>
+            </div>
+            <div class="group">
+                <div class="label">预留手机号：</div>
+                <div class="controls">
+                    <Input options="{{mobileInputOptions}}" />
+                </div>
+            </div>
+            <div class="group">
+                <div class="label">手机验证码：</div>
+                <div class="controls">
+                    <Input options="{{codeInputOptions}}" />
+                    <div class="inline" on-click="sendCode()">
+                        <CodeButton options="{{codeButtonOptions}}" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="checkboxes">
+                    <label class="checkbox fluid">
+                        <input type="checkbox" checked="{{checked}}">
+                        &nbsp;我已阅读并同意
+                        <a href="http://www.genshuixue.com/guide/service_layout?a=service&op=fast-payment" target="_bank">
+                            &nbsp;《绑卡验证服务协议》
+                        </a>
+
+                        {{#if !checked}}
+                            <div class="error">
+                                抱歉，您必须同意绑卡验服务协议才能进行绑卡
+                            </div>
+                        {{/if}}
+                    </label>
+                </div>
+            </div>
+            <div class="group submit">
+                <div class="buttons">
+                    <button class="button primary btn-submit" on-click="submitCompanyBindBankCardForm()"
+                    {{#if submiting}} disabled{{/if}}
+                    >
+                    确定
+                    </button>
+                </div>
+            </div>
+        </div>
+        <style>
+            {{style}}
+        </style>
+    </div>
+{{/if}}

@@ -1,0 +1,42 @@
+<div id="nav">
+    <div class="wrapper">
+
+        {{#if userName}}
+        <span class="account-info">
+            <span class="tiny">
+                你好，
+            </span>
+            <a class="link tiny" href="
+            {{#if userRole == 'teacher'}}
+                /teacher_center/index
+            {{else}}
+                /student_center/index
+            {{/if}}
+            ">
+                {{cutString(userName, 10)}}
+            </a>
+            <a class="link tiny quit" href="{{rootHttp}}/auth/logout?next=/static/login">
+                退出
+            </a>
+        </span>
+        {{else}}
+        <a class="link tiny primary" href="{{rootHttp}}/static/login">
+            <i class="icon icon-user"></i>
+            请登录
+        </a>
+        <a class="link tiny" href="{{rootHttp}}/static/register">
+            免费注册
+        </a>
+        {{/if}}
+
+        <a class="link tiny" href="{{rootHttp}}/static/app">
+            <i class="icon icon-mobile"></i>
+            手机跟谁学
+        </a>
+        <a class="link tiny" href="{{rootHttp}}/static/windows">
+            <i class="icon icon-live-o"></i>
+            直播助手
+        </a>
+
+    </div>
+</div>

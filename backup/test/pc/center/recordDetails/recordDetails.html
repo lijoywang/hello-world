@@ -1,0 +1,46 @@
+<div class="record-details">
+
+    <div class="floated card">
+        <FilterBar options="{{filterBarOptions}}" />
+        {{#if options.recordType === SUBTAB_TRADE_RECORD
+           && !tradeTableOptions.list}}
+            <div class="no-record muted">
+                加载中...
+            </div>
+        {{elseif options.recordType === SUBTAB_BALANCE_RECORD
+           && !balanceTableOptions.list}}
+           <div class="no-record muted">
+                加载中...
+            </div>
+        {{elseif options.recordType === SUBTAB_TRADE_RECORD
+           && tradeTableOptions.list.length == 0}}
+            <div class="no-record muted">
+                还没有交易记录哦~
+            </div>
+        {{elseif options.recordType === SUBTAB_BALANCE_RECORD
+           && balanceTableOptions.list.length == 0}}
+           <div class="no-record muted">
+                还没有余额收支明细记录~
+            </div>
+        {{else}}
+
+            {{#if options.recordType === SUBTAB_TRADE_RECORD}}
+            <TradeTable options="{{tradeTableOptions}}" />
+            {{elseif options.recordType === SUBTAB_BALANCE_RECORD}}
+            <BalanceTable options="{{balanceTableOptions}}" />
+            {{/if}}
+            <div class="pager">
+                <Pager options="{{pagerOptions}}" />
+            </div>
+        {{/if}}
+    </div>
+
+    <div class="navigator-container">
+        <Navigator options="{{navigatorOptions}}" />
+    </div>
+
+    <style>
+        {{style}}
+    </style>
+
+</div>

@@ -1,0 +1,70 @@
+<div class="bind-bank-card">
+
+    {{#if bindSuccess}}
+        <BindBankCardSuccess options="{{options.bindBankCardSuccessOptions}}" />
+    {{else}}
+        {{#if options.accountType == ACCOUNT_TYPE_PERSON}}
+            {{#if options.bindType == BIND_TYPE_NEW_WITHDRAW
+                || options.bindType == BIND_TYPE_EDIT_WITHDRAW
+            }}
+                <div class="text info safe-tip">
+                    <i class="icon icon-info-circle"></i>
+                    您好，为保证你的帐号资金安全，只能提现到本人的储蓄卡。
+                </div>
+            {{/if}}
+
+            <PersonBindBankCardForm options="{{options.personBindBankCardFormOptions}}" bindType="{{options.bindType}}" />
+            <div class="action">
+                {{#if needServiceAgreement}}
+                <label class="checkbox fluid service-agreement">
+                    <input type="checkbox" checked="{{acceptAgreement}}">
+                    我已阅读并同意
+                    <a class="info" href="{{agreementUrl}}" target="_blank">
+                        《绑卡验证服务协议》
+                    </a>
+                </label>
+                {{/if}}
+                <div class="buttons">
+                    <button class="button primary" on-click="submitPersonBindBankCardForm()"
+                    {{#if submiting}} disabled{{/if}}
+                    >
+                        提交
+                    </button>
+                    {{#if !hasAccountType}}
+                    <button class="button secondary btn-prev" on-click="showAccountType()">
+                        上一步
+                    </button>
+                    {{/if}}
+                </div>
+
+            </div>
+        {{elseif options.accountType == ACCOUNT_TYPE_COMPANY}}
+            <CompanyBindBankCardForm options="{{options.companyBindBankCardFormOptions}}" bindType="{{options.bindType}}" />
+            <div class="action">
+                <div class="buttons">
+                    <button class="button primary btn-submit" on-click="submitCompanyBindBankCardForm()"
+                    {{#if submiting}} disabled{{/if}}
+                    >
+                        提交
+                    </button>
+                    {{#if !hasAccountType}}
+                    <button class="button secondary btn-prev" on-click="showAccountType()">
+                        上一步
+                    </button>
+                    {{/if}}
+                </div>
+            </div>
+        {{else}}
+            <AccountTypeSelector options="{{accountTypeSelectorOptions}}" />
+            <div class="action">
+                <div class="button primary btn-next" on-click="submitAccountType()">
+                    下一步
+                </div>
+            </div>
+        {{/if}}
+    {{/if}}
+
+    <style>
+        {{style}}
+    </style>
+</div>

@@ -1,0 +1,21 @@
+{{#if chargeSuccess}}
+    <ChargeSuccess options="{{chargeSuccessOptions}}" />
+{{else}}
+    <div class="center-charge">
+        <ChargeByEbank options="{{options.chargeByPersonEbankOptions}}" />
+        <button class="button primary btn-charge" on-click="submit()"
+        {{#if submiting}} disabled{{/if}}
+        >
+            充值
+        </button>
+
+        <div class="help">
+            <i class="icon mascot"></i>
+            支付有问题？请拨打客服热线 4000-910-910
+        </div>
+
+        <style>
+            {{style}}
+        </style>
+    </div>
+{{/if}}

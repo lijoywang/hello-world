@@ -1,0 +1,126 @@
+@import 'pc/common/variable.styl'
+
+#app
+    background-color #fff
+
+.mask
+    display none
+
+.pay-info
+    padding $gap-medium 15px
+    border 1px solid #f7e7b1
+    background-color #fffaec
+    color #5b5a55
+    clearfix()
+
+    .money
+        display inline-block
+        padding-right $gap-huge
+        border-right 1px solid $brand-divider
+
+        > div
+            color $brand-error
+            font-size 30px
+
+    .text
+        display inline-block
+        padding-left $gap-huge
+
+        > div
+            font-size $font-large
+            margin-bottom 8px
+            > span
+                margin-left $gap-huge
+
+.other-pay
+    padding $gap-medium 30px
+    border 1px solid $brand-border
+
+    a
+        width 150px
+        height 40px
+        margin 6px 12px 0 0
+        border 1px solid $brand-divider
+        border-radius 3px
+        display inline-block
+        cursor pointer
+
+    .other-pay-text
+        font-weight bold
+
+.select-note
+    font-size $font-large
+    color #5b5a55
+    margin $gap-huge 0 $gap-medium 0
+
+.dropdown
+    width 1000px
+
+.card
+    border 1px solid $brand-muted
+    color #5b5a55
+
+    > div
+        display inline-block
+        vertical-align top
+
+    .header
+        color $brand-muted
+        background-color #fafafa
+        padding 18px 30px
+
+        > p
+            margin 0
+            color #000
+            font-weight bold
+
+    .body
+        padding 18px 0 18px 30px
+
+        > div
+            display inline-block
+
+
+    .new-card
+        padding 8px 5px
+        margin-left $gap-medium
+        border 1px dashed $brand-muted
+        border-radius 5px
+
+    .pay-money
+        margin-left $gap-medium
+        position relative
+        bottom $gap-medium
+        > span
+            color #e76d2c
+            font-size $font-large
+
+.form
+    margin $gap-huge auto
+    width 430px
+
+.zhifubao
+    width 66px
+    height 24px
+    margin 8px auto
+    background url('./bank.jpg')
+    background-position -104px -82px
+
+.weixin
+    width 87px
+    height 22px
+    margin 9px auto
+    background url('./bank.jpg')
+    background-position -281px -104px
+.wangyin
+    width 90px
+    height 26px
+    background url('./ebank.png')
+    background-size 90px 26px
+    margin 6px auto
+
+
+
+
+
+

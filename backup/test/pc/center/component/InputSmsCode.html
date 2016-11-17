@@ -1,0 +1,39 @@
+<div class="form input-sms-code">
+
+    <div class="group">
+        <div class="label"></div>
+        <div class="controls">
+            <div class="label">
+                请输入验证码，已发送至
+                <strong>
+                    {{formatMobile(options.mobile)}}
+                </strong>
+            </div>
+        </div>
+    </div>
+    <div class="group">
+        <div class="label"></div>
+        <div class="controls">
+            <Input options="{{codeInputOptions}}" />
+            <CodeButton options="{{codeButtonOptions}}" />
+        </div>
+    </div>
+
+    <div class="label link btn-show-voice" on-click="showVoiceButton()">
+        没收到验证码？
+    </div>
+
+    <div class="group footer">
+        <div class="label"></div>
+        <div class="controls">
+            <button class="button primary btn-submit" on-click="submit()"{{#if submiting}} disabled{{/if}}>
+                {{options.buttonName}}
+            </button>
+        </div>
+    </div>
+
+
+    <style>
+        {{style}}
+    </style>
+</div>

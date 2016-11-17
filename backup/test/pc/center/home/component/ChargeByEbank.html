@@ -1,0 +1,100 @@
+<div class="charge-by-ebank">
+    <div class="form">
+        <div class="group">
+            <div class="label">
+                账户余额：
+            </div>
+            <div class="controls">
+                <div class="label">
+                    ￥{{formatMoney(options.balance)}}
+                </div>
+            </div>
+        </div>
+
+        <div class="group">
+            <div class="label">
+                充值金额：
+            </div>
+            <div class="controls">
+                <div class="input-group">
+                    <div class="label muted">
+                        ￥
+                    </div>
+                    <Input options="{{amountInputOptions}}" />
+                    <div class="label muted">
+                        元
+                    </div>
+                </div>
+                <!--{{#if getChargeRangeHint()}}-->
+                <!--<small class="inline muted">-->
+                    <!--{{getChargeRangeHint()}}-->
+                <!--</small>-->
+                <!--{{/if}}-->
+            </div>
+        </div>
+    </div>
+
+    <p class="select-note">
+        选择支付方式
+    </p>
+
+    <div class="pay-style">
+        <div class="select-card">
+            <div class="form inline">
+                <div class="group">
+                    <label class="label radio">
+                        <input type="radio" checked> 快捷支付
+                        <span class="small muted reminder">
+                            无需网银，安全快捷
+                        </span>
+                    </label>
+                </div>
+
+                <div class="group">
+                    {{#if bankInfoOptions.data.length > 0}}
+                    <BankInfo options="{{bankInfoOptions}}" />
+                    {{/if}}
+                </div>
+
+                <div class="group">
+                    <div class="button small secondary new-card" on-click="newCard()">
+                        使用新银行卡
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{#if bankInfoOptions.data.length}}
+            <div class="send-code">
+                <div class="form inline">
+                    <div class="group">
+                        <div class="label">
+                            短信验证码：
+                        </div>
+                        <div class="controls">
+                            <Input options="{{codeInputOptions}}" />
+                            <div class="inline" on-click="sendCode()">
+                                <CodeButton options="{{codeButtonOptions}}" />
+                            </div>
+                            {{#if bankInfoItem.owner_mobile}}
+                                <div class="inline">
+                                    <span class="small muted">
+                                        已绑定手机
+                                    </span>
+                                    <span class="small info">
+                                        {{formatMobile(bankInfoItem.owner_mobile)}}
+                                    </span>
+                                </div>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        {{/if}}
+    </div>
+
+    <style>
+        {{style}}
+    </style>
+</div>

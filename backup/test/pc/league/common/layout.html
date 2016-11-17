@@ -1,0 +1,75 @@
+<div id="header">
+    <div class="floated">
+        欢迎您，
+        <span class="username">
+            {{accountMobile}}
+        </span>
+        <span class="links">
+            <a class="link" href="{{rootHttp}}/view/help.html" target="_blank">
+                帮助中心
+            </a>
+            <a class="link" href="{{rootHttp}}/auth/logoutChannel.ajax?channelAccount={{accountMobile}}">
+                退出
+            </a>
+        </span>
+    </div>
+    <span class="logo"></span>
+    <h1>联盟</h1>
+</div>
+
+<div id="main">
+    <div id="sidebar">
+        <div class="menu">
+            <a class="link fluid huge title" href="{{rootHttp}}/main.html#/promotion-center/course-promotion">
+                推广中心
+            </a>
+            <div class="sub-menu">
+                <a class="link fluid" href="{{rootHttp}}/main.html#/promotion-center/course-promotion">
+                    课程推广
+                </a>
+                <a class="link fluid" href="{{rootHttp}}/main.html#/promotion-center/subject-promotion">
+                    专题推广
+                </a>
+            </div>
+        </div>
+        <div class="menu">
+            <a class="link fluid huge title" href="{{rootHttp}}/main.html#/data-center/data-detail">
+                数据中心
+            </a>
+            <div class="sub-menu">
+                <a class="link fluid" href="{{rootHttp}}/main.html#/data-center/data-detail">
+                    数据明细
+                </a>
+            </div>
+        </div>
+        <div class="menu">
+            <a class="link fluid huge title" href="{{rootHttp}}/main.html#/user/info">
+                账户管理
+            </a>
+            <div class="sub-menu">
+                <a class="link fluid" href="{{rootHttp}}/main.html#/user/info">
+                    基本信息
+                </a>
+                <a class="link fluid" href="{{rootHttp}}/main.html#/user/security">
+                    安全设置
+                </a>
+                <a class="link fluid" href="{{rootHttp}}/main.html#/user/sub-channel">
+                    子渠道管理
+                </a>
+            </div>
+        </div>
+        <div class="menu checked">
+            <a class="link fluid huge title" href="/league/overview?league_id={{leagueId}}&account_mobile={{accountMobile}}">
+                结算中心
+            </a>
+            <div class="sub-menu">
+                <a class="link fluid checked" href="/league/overview?league_id={{leagueId}}&account_mobile={{accountMobile}}">
+                    资金明细
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+
+    </div>
+</div>

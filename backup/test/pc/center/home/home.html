@@ -1,0 +1,65 @@
+{{#if view === VIEW_INDEX}}
+<div class="wallet-center">
+    <div class="header">
+        <div class="middle-block">
+            <img src="{{compressImage(avatar, 50, 50)}}">
+            <div>
+                您好，{{displayName}}
+            </div>
+        </div>
+    </div>
+</div>
+
+{{/if}}
+
+<div class="wallet-center wrapper">
+
+    {{#if view === VIEW_INDEX}}
+        <Balance options="{{balanceOptions}}" />
+    {{elseif view === VIEW_WITHDRAW}}
+        <div class="card">
+            <div class="header">
+                <i class="icon icon-chevron-left" on-click="set('view', VIEW_INDEX)"></i>
+                提现
+            </div>
+            <div class="body">
+                <Withdraw options="{{withdrawOptions}}" />
+            </div>
+        </div>
+
+    {{elseif view === VIEW_WITHDRAW_SUCCESS}}
+        <div class="card">
+            <div class="header">
+                提现
+            </div>
+            <div class="body">
+                <WithdrawSuccess options="{{withdrawSuccessOptions}}" />
+            </div>
+        </div>
+
+    {{elseif view === VIEW_CHARGE}}
+        <div class="card">
+            <div class="header">
+                <i class="icon icon-chevron-left" on-click="set('view', VIEW_INDEX)"></i>
+                充值
+            </div>
+            <div class="body">
+                <Charge options="{{chargeOptions}}" />
+            </div>
+        </div>
+    {{elseif view === VIEW_RESET_PAY_PASSWORD_FORM}}
+        <div class="card">
+            <div class="header">
+                <i class="icon icon-chevron-left" on-click="set('view', VIEW_WITHDRAW)"></i>
+                重置密码
+            </div>
+            <div class="body centered">
+                <ResetPayPasswordForm options="{{resetPayPasswordFormOptions}}" />
+            </div>
+        </div>
+    {{/if}}
+
+</div>
+<style>
+    {{style}}
+</style>

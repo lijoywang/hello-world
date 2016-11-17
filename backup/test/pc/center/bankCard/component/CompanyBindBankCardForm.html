@@ -1,0 +1,66 @@
+<div class="company-bind-card-form">
+
+    <div class="form">
+        <div class="group">
+            <div class="label">
+                企业开户名称：
+            </div>
+            <div class="controls">
+                <Input options="{{companyNameInputOptions}}" />
+            </div>
+        </div>
+        <div class="group">
+            <div class="label">
+                银行卡号：
+            </div>
+            <div class="controls">
+                <div class="input-group">
+                    <Input options="{{bankCardNumberInputOptions}}" />
+                </div>
+            </div>
+        </div>
+
+        {{#if options.bindType == BIND_TYPE_NEW_PAY}}
+        <div class="group">
+            <div class="label">
+                银行卡类型：
+            </div>
+            <div class="controls">
+                <div class="radios">
+                    <label class="radio label">
+                        <input type="radio" name="{{bankCardType}}" value="{{BANK_CARD_TYPE_DEPOSITS}}">
+                        储蓄卡
+                    </label>
+                    <label class="radio label">
+                        <input type="radio" name="{{bankCardType}}" value="{{BANK_CARD_TYPE_CREDIT}}">
+                        信用卡
+                    </label>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+
+        <div class="group">
+            <div class="label">
+                所属银行：
+            </div>
+            <div class="controls">
+                <Select options="{{bankSelectOptions}}" />
+            </div>
+        </div>
+        <div class="group">
+            <div class="label">
+                开户行地区：
+            </div>
+            <div class="controls">
+                <AddressSelect options="{{bankLocationOptions}}" />
+                <div class="inline">
+                    <i class="icon text info icon-question-circle" data-title="请填写银行卡开户行所在地区"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        {{style}}
+    </style>
+</div>

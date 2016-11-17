@@ -1,0 +1,208 @@
+@import 'dep/icomoon/pc/0.0.1/style.styl'
+@import 'common/mixin.styl'
+@import 'pc/common/variable.styl'
+
+.icon
+    display inline-block
+
+.floated
+    float right
+
+.centered
+    text-align center
+
+.hidden
+    display none
+
+.pagination
+    text-align center
+
+.pagination.tight
+    .ellipsis
+        margin 0 8px !important
+
+.input-group
+    .label.muted
+        border-color $brand-border
+
+.tip-message
+    background-color #f8f8f8
+    border 0
+    border-bottom 1px solid $brand-border
+    width 100%
+    text-align center
+    position fixed
+    left 0
+    top -35px
+    z-index $zindex-huge
+    transition all 0.4s
+
+    > .close
+        float right
+        cursor pointer
+
+    &.active
+        top 0
+
+body
+
+    background-color $brand-bg
+    padding-top 34px
+
+    &.dragging
+        user-select none
+
+    > .tooltip
+        border-color #444
+        background-color #666
+        color #fff
+        z-index $zindex-huge + 1
+
+        &:before
+            border-color #444
+
+        &:after
+            border-color #666
+
+#nav,
+#header,
+#main
+    > .wrapper
+        width $page-width
+        margin 0 auto
+        clearfix()
+
+#nav
+    border-bottom 1px solid $brand-border
+    font-size 90%
+    padding 7px 0
+    user-select none
+
+    position absolute
+    left 0
+    right 0
+    top 0
+
+    .link-quit
+        margin-left 20px
+
+    .icon
+        color $brand-primary
+        margin-right 5px
+
+#header
+    background-color #FFF
+    > .wrapper
+        clearfix()
+
+        background url('../img/my-wallet.png') no-repeat 0
+
+        .button
+            font-weight bold
+            padding-top $gap-huge
+            padding-bottom $gap-huge
+            transition color 0.2s
+
+            &:hover
+                color $brand-primary
+            &.active
+                color $brand-primary
+                border-bottom 2px solid $brand-primary
+
+            &:last-child
+                padding-right 0
+
+    + #main
+        margin-top $gap-huge
+
+.card
+    border 1px solid $brand-border
+    background-color #FFF
+
+    + .card
+        margin-top $gap-huge
+
+    > .header
+        background-color $brand-bg
+        border-bottom 1px solid $brand-divider
+        padding $gap-medium $gap-huge
+
+        > .icon-chevron-left
+            cursor pointer
+            margin-right $gap-small
+            font-size 120%
+            vertical-align text-top
+
+    > .body
+        padding $gap-huge
+
+
+#main
+    margin-bottom 100px
+
+.icon-home
+    margin-right $gap-small
+
+#footer
+    margin-top 30px
+    padding-top 30px
+    border-top 1px solid $brand-border
+    background-color #FFF
+
+    .wrapper
+        width $page-width
+        margin 0 auto
+
+    .service
+        float right
+        width 300px
+        text-align center
+
+        > .icon
+            font-size 50px
+
+        > h4
+            font-size 30px
+            line-height 48px
+            color #000
+            font-weight normal
+            margin 0
+
+    .detail
+
+        clearfix()
+
+        h4
+            margin 0 0 5px
+
+        > div
+            border-right 1px solid $brand-divider
+            float left
+            width 170px
+            height 157px
+            padding-left 30px
+
+        li
+            padding 2px 0
+
+    .copyright
+        text-align center
+        border-top 1px solid $brand-border
+        margin-top 20px
+        padding 20px 0
+
+
+.wechat-qrcode-dialog
+
+    .table
+        width auto
+
+    > .body
+        padding 20px
+        padding-top 10px
+
+.wechat-qrcode
+    width 361px
+    height 160px
+    background url(src/pc/common/img/qrcode-wechat.png) no-repeat
+    background-image -webkit-image-set(url(src/pc/common/img/qrcode-wechat.png) 1x,url(src/pc/common/img/qrcode-wechat@2x.png) 2x)

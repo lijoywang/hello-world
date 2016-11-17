@@ -1,0 +1,41 @@
+<div class="select-bank dialog draggable">
+    <div class="header">
+        <div class="title">
+            <span class="primary money">
+                支付￥{{payMoney}}
+            </span>
+            网银支付
+
+        </div>
+    </div>
+    <div class="close">
+        ×
+    </div>
+    <div class="body">
+
+        <div>
+            选择银行卡后请在新窗口的银行页面使用
+            <span class="primary">
+                网银或银行U盾
+            </span>
+            支付，其它方式会有额度限制。
+            <span class="info">
+                建议使用IE浏览器
+            </span>
+        </div>
+        <div class="bank-container">
+            <ul class="bank-list inline tight">
+                {{#each supportedBankList}}
+                    <li class="bank" on-click="selectBank(bank_no)">
+                        <img src="{{bank_logo}}" />
+                        <span>{{name}}</span>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <style>
+        {{style}}
+    </style>
+</div>

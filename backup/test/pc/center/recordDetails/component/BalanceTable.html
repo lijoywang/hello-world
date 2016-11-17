@@ -1,0 +1,48 @@
+<table class="table row-bordered">
+    <thead>
+        <tr>
+            <th style="width: 110px">时间</th>
+            <th style="width: 50%">备注</th>
+            <th>类型</th>
+            <th>收入</th>
+            <th>支出</th>
+            <th>账户余额</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each options.list}}
+        <tr>
+            <td>
+                {{formatDate(create_time)}}
+            </td>
+            <td class="balance-record-note">
+                {{#if url}}
+                    <a class="info" href="{{url}}" target="_blank">
+                        {{op_info}}
+                    </a>
+                {{else}}
+                    {{op_info}}
+                {{/if}}
+            </td>
+            <td>
+                {{op_type_name}}
+            </td>
+            <td class="success">
+                {{#if income != 0}}
+                    {{formatMoney(income)}}
+                {{/if}}
+            </td>
+            <td class="error">
+                {{#if cost != 0}}
+                    -{{formatMoney(cost)}}
+                {{/if}}
+            </td>
+            <td>
+                {{formatMoney(curr_balance)}}
+            </td>
+        </tr>
+        {{/each}}
+
+    </tbody>
+
+</table>
