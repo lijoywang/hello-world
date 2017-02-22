@@ -11,7 +11,6 @@ var path = require("path");
 //log4js.addAppender(log4js.appenders.file(path.join(config.projectRoot,'/logs')), 'logs');
 
 //var logger = log4js.getLogger('build');
-//logger.setLevel('ERROR');
 
 var log4js = require('log4js');
 
